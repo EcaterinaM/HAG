@@ -1,0 +1,11 @@
+<div class="container-level">
+  <div *ngIf="!isLocked" class="level-number">
+    {{numberLevel}}
+  </div>
+  <div *ngIf="isLocked" class="locker">
+    <i class="fa fa-lock" aria-hidden="true"></i>
+  </div>
+  <div *ngIf="!isLocked" class="stars">
+    <app-stars></app-stars>
+  </div>
+</div>

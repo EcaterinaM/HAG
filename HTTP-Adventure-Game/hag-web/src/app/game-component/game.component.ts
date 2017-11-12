@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -6,11 +7,12 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./game.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class GameComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+export class GameComponent {
+  constructor(private router:Router){
   }
-
+  
+  public exit(): void {
+    this.router.navigate(['/home']);
+  }
 }
