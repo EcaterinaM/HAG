@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { Constants } from '../../../shared/constants/string.constants';
 
 @Component({
   selector: 'app-start-game',
@@ -7,10 +8,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./start-game.component.scss']
 })
 export class StartGameComponent{
-  constructor(private router:Router){
-  }
-
-  public routeToHomepage(): void {
-    this.router.navigate(['/home']);
-  }
+  path = Constants.RoomLevelsPath;
 }

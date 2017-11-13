@@ -10,6 +10,7 @@ import { routing } from './app.routing';
 import { HomeComponent } from './components/home-component/home.component';
 import { RoomLevelsComponent } from './components/room-levels-component/room-levels.component';
 import { StartGameComponent } from './components/start-game-component/start-game.component';
+import { BackComponent } from '../shared/components/back-component/back.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StartGameComponent } from './components/start-game-component/start-game
     LevelComponent,
     StarsComponent,
     RoomLevelsComponent,
-    StartGameComponent
+    StartGameComponent,
+    BackComponent
   ],
   imports: [
     BrowserModule,
