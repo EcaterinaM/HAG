@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="container-levels" >
+      <div class="level" *ngFor="let level of levels">
+        <a (click)="startLevel()">
+            <app-level [numberLevel]="level" 
+            [isLocked]="false"></app-level>
+        </a>
+    </div>
+  </div>
+</div>
+

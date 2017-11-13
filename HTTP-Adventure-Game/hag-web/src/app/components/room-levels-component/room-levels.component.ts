@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,14 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./room-levels.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class RoomLevelsComponent {
-  public levels = [1,2];
+export class RoomLevelsComponent{
+  public levels = [1, 2];
  
   constructor(private router:Router){
   }
   
-  // public startGame():void{
-  //   console.log('a');
-  //   this.router.navigate(['/start-game']);
-  // }
+  public startLevel():void{
+    this.router.navigate(['/start-game']);
+  }
 }
