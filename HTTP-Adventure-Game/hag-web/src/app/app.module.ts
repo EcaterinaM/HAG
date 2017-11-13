@@ -1,41 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppComponent } from './app.component';
-import { GameComponent } from './game-component/game.component';
-import { HomeComponent } from './home-component/home.component';
 import { LevelComponent } from '../shared/components/level-component/level.component';
 import { StarsComponent } from '../shared/components/stars-component/stars.component';
 import { RatingModule } from 'ngx-rating';
 import { FormsModule } from '@angular/forms';
-import { RoomLevelsComponent } from './game-component/room-levels-component/room-levels.component';
-import { StartGameComponent } from './game-component/start-game-component/start-game.component';
-
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },  
-  { path: 'home', component: HomeComponent },  
-  { path: 'game', component: GameComponent },
-  { path: 'start-game', component: StartGameComponent},
-  { path: '**', redirectTo: '/home', pathMatch: 'full'},
-];
-
+import { routing } from './app.routing';
+import { HomeComponent } from './components/home-component/home.component';
+import { RoomLevelsComponent } from './components/room-levels-component/room-levels.component';
+import { StartGameComponent } from './components/start-game-component/start-game.component';
+import { BackComponent } from '../shared/components/back-component/back.component';
+import { ButtonAnswerComponent } from '../shared/components/button-answer-component/button-answer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent,
     HomeComponent,
     LevelComponent,
     StarsComponent,
     RoomLevelsComponent,
-    StartGameComponent
+    StartGameComponent,
+    BackComponent,
+    ButtonAnswerComponent
   ],
-  imports: [RouterModule.forRoot( 
-      appRoutes, { enableTracing: true } ),
+  imports: [
     BrowserModule,
     RatingModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

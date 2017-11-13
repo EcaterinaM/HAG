@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="container-levels" >
+        <ul>
+          <li *ngFor="let level of levels">
+              <a  class="level"
+              (click)="startLevel()">
+              <app-level [numberLevel]="level.levelNumber" 
+                         [isLocked]="level.isLocked">
+              </app-level>
+              </a>
+          </li>
+        </ul>
+   </div>
+  </div>
+</div>
+
+<app-back class="back-path"
+          [path]="path">
+</app-back>

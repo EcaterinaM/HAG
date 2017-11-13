@@ -11,7 +11,7 @@ export class HomeComponent {
 
   constructor(private router: Router) { }
   
-  public startGame(): void {
-    this.router.navigate(['game']);
+  public showLevels(): void {
+    this.router.navigate(['/room-levels']);
   }
 }
