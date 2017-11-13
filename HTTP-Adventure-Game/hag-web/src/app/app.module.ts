@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home-component/home.component';
 import { RoomLevelsComponent } from './components/room-levels-component/room-levels.component';
 import { StartGameComponent } from './components/start-game-component/start-game.component';
 import { BackComponent } from '../shared/components/back-component/back.component';
+import { ButtonAnswerComponent } from '../shared/components/button-answer-component/button-answer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BackComponent } from '../shared/components/back-component/back.componen
     StarsComponent,
     RoomLevelsComponent,
     StartGameComponent,
-    BackComponent
+    BackComponent,
+    ButtonAnswerComponent
   ],
   imports: [
     BrowserModule,
