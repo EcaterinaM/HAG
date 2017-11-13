@@ -1,0 +1,25 @@
+.container-levels{
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+    //background-color: white;
+    opacity: 0.5;
+    //border: 15px solid #F06543;
+    display: flex;
+    margin: auto;  
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.level{
+    margin-left: 160px;
+    margin-top: 40px;
+}
+
+.level:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
