@@ -8,8 +8,8 @@
 
 .action-button
 {
-	position: relative;
-	padding: 10px 40px;
+	position: absolute;
+	padding: 17px 40px;
     margin: 0px 10px 10px 0px;
 	border-radius: 10px;
 	font-family: $font-family;
@@ -19,7 +19,9 @@
 	background-color:  #F2CF66;
 	border-bottom: 5px solid #D1B358;
     text-shadow: 0px -2px #D1B358;
-    opacity: 1;
+	opacity: 1;
+	width: 400px;
+	height: 40px;
 }
 
 .action-button:active

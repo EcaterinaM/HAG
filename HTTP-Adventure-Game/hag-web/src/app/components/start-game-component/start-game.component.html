@@ -1,7 +1,27 @@
 <div class="container-start-game">
-    <app-button-answer class="button"
-                       [content]="content">
-    </app-button-answer>
+    <div class="container-question">
+        {{question}}
+    </div>
+    <div class="container-button-answer">
+        <table>
+            <tr>
+                <th>
+                    <app-button-answer class="button-answer1" [content]="content"></app-button-answer>        
+                </th>
+                <th>
+                    <app-button-answer class="button-answer2" [content]="content"></app-button-answer>        
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <app-button-answer class="button-answer3" [content]="content"></app-button-answer>        
+                </td>
+                <td>
+                    <app-button-answer class="button-answer4" [content]="content"></app-button-answer>         
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
 
 <app-back class="back-path"

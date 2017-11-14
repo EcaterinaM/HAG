@@ -9,5 +9,6 @@ import { Constants } from '../../../shared/constants/string.constants';
 })
 export class StartGameComponent{
   path = Constants.RoomLevelsPath;
-  content = "Choose this answer because is the correct one."
+  content = "Choose this answer";
+  question = "What is the correct answer?";
 }
