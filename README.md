@@ -1,4 +1,4 @@
-# HAG
+# HAG (HTTP Adventure Game)
 Project, Infoiasi, Cliw,Web
 
-Să se conceapă un joc Web educativ de tip adventure al cărui scenariu se bazează pe fluxul de acţiuni privitoare la HTTP, conform diagramei protocolului. Pentru fiecare "scenă" principală, se va interacţiona cu jucătorul oferindu-i-se întrebări de tip trivia, indicii (posibil false), resurse Web de interes referitoare la conceptele de bază ale spaţiului WWW, eventual recompense/penalizări etc. Aceste informaţii pot fi preluate dintr-o resursă în format JSON şi eventual ajustate via o interfaţă de configurare.
+An adventure-based educational web game whose scenario is based on the HTTP action flow, according to the protocol diagram. For each of the main scenes, it will interact with the player by providing trivia, clues (possibly false), Web resources of interest to the basic concepts of WWW, eventual rewards / penalties, etc. This information can be retrieved from a resource in JSON format and eventually adjusted via a configuration interface.
