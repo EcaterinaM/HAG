@@ -1,7 +1,9 @@
 <div class='titlePlanets' *ngIf="!click">
-    <div>CHOOSE YOUR</div>
-    <div>WORLD</div>
+  <div class='title-level'>
+      <p>CHOOSE YOUR</p>
+      <p>WORLD</p>
   </div>
+</div>
 
 <div  class="container-fluid">
   <div class="row">
@@ -19,15 +21,19 @@
 
         <div *ngIf="click" class="bigPlanet" (click)="startLevel()">
           <app-planet [planetName]="planetName"></app-planet>
+          <div *ngIf="click" class='container-back' (click)="seeAllPlanets()">
+              <div class="route"><BACK</div>
+            </div>
+            
         </div>
-        
-      </div>
     </div>
   </div>
-
-<div *ngIf="click" class='container-back' (click)="seeAllPlanets()">
-  <div class="route"><BACK</div>
 </div>
+
+<!-- de refactorizat 2 butoaten de back -->
+<!-- <div *ngIf="click" class='container-back' (click)="seeAllPlanets()">
+  <div class="route"><BACK</div>
+</div> -->
 
 <app-back *ngIf="!click" class="back-path"
           [path]="path">
