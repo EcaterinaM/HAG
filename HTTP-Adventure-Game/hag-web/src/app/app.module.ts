@@ -12,6 +12,7 @@ import { RoomLevelsComponent } from './components/room-levels-component/room-lev
 import { StartGameComponent } from './components/start-game-component/start-game.component';
 import { BackComponent } from '../shared/components/back-component/back.component';
 import { ButtonAnswerComponent } from '../shared/components/button-answer-component/button-answer.component';
+import { PlanetComponent } from '../shared/components/planet-component/planet.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ButtonAnswerComponent } from '../shared/components/button-answer-compon
     RoomLevelsComponent,
     StartGameComponent,
     BackComponent,
-    ButtonAnswerComponent
+    ButtonAnswerComponent,
+    PlanetComponent
   ],
   imports: [
     BrowserModule,

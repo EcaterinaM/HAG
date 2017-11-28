@@ -1,18 +1,16 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-level',
-  templateUrl: './level.component.html',
-  styleUrls: ['./level.component.scss'],
+  selector: 'app-planet',
+  templateUrl: './planet.component.html',
+  styleUrls: ['./planet.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class LevelComponent {
-  @Input() isLocked: boolean;
+export class PlanetComponent implements OnInit {
   @Input() planetName: string;
   planet: string;
-  // public click:boolean = false;
 
- ngOnInit() {
+  ngOnInit() {
     if (this.planetName == "Pluto"){
       this.planet = "./assets/Planets/Pluto.svg#pluto";
     } 
@@ -42,8 +40,4 @@ export class LevelComponent {
     } 
   }
 
-  // public goPlanetPage(): void{
-  //   console.log('a');
-  //   this.click = true;
-  // }
 }

@@ -1,19 +1,34 @@
-<div class="container-fluid">
+<div class='titlePlanets' *ngIf="!click">
+    <div>CHOOSE YOUR</div>
+    <div>WORLD</div>
+  </div>
+
+<div  class="container-fluid">
   <div class="row">
-    <div class="container-levels" >
-        <ul>
+    <div class="container-levels">
+
+        <ul *ngIf="!click">
           <li *ngFor="let level of levels">
-              <div class="level" (click)="startLevel()"> 
+              <div class="level" (click)="goPlanetPage(level)" > 
                 <app-level [isLocked]="level.isLocked" 
                            [planetName]="level.planetName">
                 </app-level>
               </div>
           </li>
         </ul>
-   </div>
+
+        <div *ngIf="click" class="bigPlanet" (click)="startLevel()">
+          <app-planet [planetName]="planetName"></app-planet>
+        </div>
+        
+      </div>
+    </div>
   </div>
+
+<div *ngIf="click" class='container-back' (click)="seeAllPlanets()">
+  <div class="route"><BACK</div>
 </div>
 
-<app-back class="back-path"
+<app-back *ngIf="!click" class="back-path"
           [path]="path">
 </app-back>
