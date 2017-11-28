@@ -3,12 +3,11 @@
     <div class="container-levels" >
         <ul>
           <li *ngFor="let level of levels">
-              <a  class="level"
-              (click)="startLevel()">
-              <app-level [numberLevel]="level.levelNumber" 
-                         [isLocked]="level.isLocked">
-              </app-level>
-              </a>
+              <div class="level" (click)="startLevel()"> 
+                <app-level [isLocked]="level.isLocked" 
+                           [planetName]="level.planetName">
+                </app-level>
+              </div>
           </li>
         </ul>
    </div>

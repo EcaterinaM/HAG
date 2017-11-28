@@ -1,25 +1,35 @@
+::-webkit-scrollbar {
+    background: transparent;
+    overflow: visible;
+    }
+
 .container-levels{
-    width: 1000px;
-    height: 500px;
-    position: absolute;
-    top: 10%;
-    opacity: 0.5;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;  
-    left:0;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    display: block;
+    margin-top: 300px;
+    opacity: 0.8;
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        border: solid rgb(95, 95, 95);
+        border-radius: 10px;
+    }
     
     ul {
-        padding: 0;
         margin: 0;
+        padding: 0;
+        display: flex;flex: 1;
+        flex-direction: row;
+        touch-action: pan-x;
         list-style: none;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        
     }
     ul li{
-        float: left;
-        margin-bottom: 100px;
-        margin-left: 47px;
+        margin: 50px;
     }
 
     a{
@@ -28,7 +38,6 @@
         margin-left: auto;      
     }
 }
-
 
 .level:hover {
     -webkit-transform: scale(1.1);

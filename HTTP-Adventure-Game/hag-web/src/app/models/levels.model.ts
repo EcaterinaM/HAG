@@ -1,10 +1,10 @@
 
 export class Levels{
-    public levelNumber: number;
+    public planetName: string;
     public isLocked: boolean;
 
-    constructor(_levelNumber :number, _isLocked: boolean){
-        this.levelNumber = _levelNumber;
+    constructor(_planetName :string, _isLocked: boolean){
+        this.planetName = _planetName;
         this.isLocked = _isLocked;
     }
 }

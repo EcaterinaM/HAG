@@ -11,19 +11,19 @@ import { Constants } from '../../../shared/constants/string.constants';
 })
 export class RoomLevelsComponent implements OnInit{
   path = Constants.HomePath;
-  private levels: Array<Levels> = [];
+  private levels: Array<Levels> = [];  
   constructor(private router:Router){}
 
   ngOnInit(): void {
     this.levels = new Array<Levels>();
-    this.levels.push(new Levels(1,false));
-    this.levels.push(new Levels(2,false));
-    this.levels.push(new Levels(3,true));
-    this.levels.push(new Levels(4,true));
-    this.levels.push(new Levels(5,true));
-    this.levels.push(new Levels(6,true));
-    this.levels.push(new Levels(7,true));
-    this.levels.push(new Levels(8,true));
+    this.levels.push(new Levels("Pluto",false));
+    this.levels.push(new Levels("Saturn",false));
+    this.levels.push(new Levels("Neptun",true));
+    this.levels.push(new Levels("Uranus",true));
+    this.levels.push(new Levels("Pluto",false));
+    this.levels.push(new Levels("Saturn",false));
+    this.levels.push(new Levels("Neptun",true));
+    this.levels.push(new Levels("Uranus",true));
   }
   private startLevel():void{
     this.router.navigate([Constants.StartGamePath]) 

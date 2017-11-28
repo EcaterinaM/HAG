@@ -1,4 +1,4 @@
-<div class="container-level">
+<!-- <div class="container-level">
   <div *ngIf="!isLocked" class="level-number">
     {{numberLevel}}
   </div>
@@ -8,4 +8,10 @@
   <div *ngIf="!isLocked" class="stars">
     <app-stars></app-stars>
   </div>
+</div> -->
+
+<div class="planet">
+  <svg viewBox="0 0 100 100">
+    <use [attr.xlink:href]="planet"></use>
+ </svg>
 </div>
