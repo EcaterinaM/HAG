@@ -1,23 +1,23 @@
 <div class="container-start-game">
     <div class="container-question">
-        {{question}}
+        {{setQuestionForPlanet(2)}}
     </div>
     <div class="container-button-answer">
         <table>
             <tr>
                 <th>
-                    <app-button-answer class="button-answer1" [content]="content"></app-button-answer>        
+                    <app-button-answer class="button-answer1" (click)="getAnswer(1)" [content]="setContentForAnswer(1)"></app-button-answer>        
                 </th>
                 <th>
-                    <app-button-answer class="button-answer2" [content]="content"></app-button-answer>        
+                    <app-button-answer class="button-answer2" (click)="getAnswer(2)" [content]="setContentForAnswer(2)"></app-button-answer>        
                 </th>
             </tr>
             <tr>
                 <td>
-                    <app-button-answer class="button-answer3" [content]="content"></app-button-answer>        
+                    <app-button-answer class="button-answer3" (click)="getAnswer(3)" [content]="setContentForAnswer(3)"></app-button-answer>        
                 </td>
                 <td>
-                    <app-button-answer class="button-answer4" [content]="content"></app-button-answer>         
+                    <app-button-answer class="button-answer4" (click)="getAnswer(4)" [content]="setContentForAnswer(4)"></app-button-answer>         
                 </td>
             </tr>
         </table>

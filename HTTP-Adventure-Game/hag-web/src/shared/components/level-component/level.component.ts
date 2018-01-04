@@ -10,7 +10,6 @@ export class LevelComponent {
   @Input() isLocked: boolean;
   @Input() planetName: string;
   planet: string;
-  // public click:boolean = false;
 
  ngOnInit() {
     if (this.planetName == "Pluto"){
@@ -41,9 +40,4 @@ export class LevelComponent {
       this.planet = "./assets/Planets/Venus.svg#venus";
     } 
   }
-
-  // public goPlanetPage(): void{
-  //   console.log('a');
-  //   this.click = true;
-  // }
 }

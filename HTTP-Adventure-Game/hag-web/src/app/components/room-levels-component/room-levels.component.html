@@ -19,7 +19,7 @@
           </li>
         </ul>
 
-        <div *ngIf="click" class="bigPlanet" (click)="startLevel()">
+        <div *ngIf="click" class="bigPlanet">
           <app-planet [planetName]="planetName"></app-planet>
           <div *ngIf="click" class='container-back' (click)="seeAllPlanets()">
               <div class="route"><BACK</div>

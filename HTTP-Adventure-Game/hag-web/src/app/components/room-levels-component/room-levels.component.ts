@@ -31,14 +31,13 @@ export class RoomLevelsComponent implements OnInit{
     this.levels.push(new Levels("Pluto",false));
   }
 
-  private startLevel():void{
-    this.router.navigate([Constants.StartGamePath]) 
-  }
+  // private startLevel():void{
+  //   this.router.navigate([Constants.StartGamePath]) 
+  // }
 
   public goPlanetPage(planet): void{
     this.click = true;
     this.planetName = planet.planetName;
-    console.log(this.planetName);
   }
 
   public seeAllPlanets(): void{

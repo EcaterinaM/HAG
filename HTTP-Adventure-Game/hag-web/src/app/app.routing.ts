@@ -7,7 +7,7 @@ import { StartGameComponent } from "./components/start-game-component/start-game
 export const appRoutes: Routes = [
     { path: '', component: HomeComponent },  
     { path: 'home', component: HomeComponent },
-    { path: 'start-game', component: StartGameComponent},
+    { path: 'start-game/:idPlanet/:idLevel', component: StartGameComponent},
     { path: 'room-levels', component: RoomLevelsComponent}
   ];
   

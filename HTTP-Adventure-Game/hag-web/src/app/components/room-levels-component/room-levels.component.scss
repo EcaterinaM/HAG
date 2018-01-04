@@ -55,19 +55,17 @@
         overflow-x: scroll;
         overflow-y: hidden;
         margin: auto;
-
-        
     }
 
     ul li{
         margin: 50px;
     }
 
-    a{
-        cursor: pointer;
-        margin-right: 150px;
-        margin-left: auto;      
-    }
+    // a{
+    //     cursor: pointer;
+    //     margin-right: 150px;
+    //     margin-left: auto;      
+    // }
 }
 
 .level:hover {
@@ -94,7 +92,8 @@
         align-items: center;
         justify-content: center;
         margin: auto;
-        cursor: pointer;
+        opacity: 1 !important;
+        // cursor: pointer;
 
         svg{
             width: 100%;
