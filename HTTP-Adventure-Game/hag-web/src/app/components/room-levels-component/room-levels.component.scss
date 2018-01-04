@@ -14,6 +14,7 @@
     margin-bottom: 10px;
     .title-level{
         font-size: 30px;
+        padding-bottom: 100px;        
     }
     top: 10%;
     left: 0;
@@ -32,7 +33,7 @@
 .container-levels{
     position: relative;
     display: block;
-    opacity: 0.8;
+    opacity: 0.9999;
     margin-top: 200px;
 
     ::-webkit-scrollbar-track {
@@ -68,11 +69,11 @@
     // }
 }
 
-.level:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-}
+// .level:hover {
+//     -webkit-transform: scale(1.1);
+//     -ms-transform: scale(1.1);
+//     transform: scale(1.1);
+// }
 
 .back-path{
     left: 0px;
@@ -127,7 +128,6 @@
         top: 0%;
         .title-level{
             font-size: 20px;
-           
         }
     }   
     

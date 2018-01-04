@@ -1,7 +1,7 @@
 <div class='titlePlanets' *ngIf="!click">
   <div class='title-level'>
-      <p>CHOOSE YOUR</p>
-      <p>WORLD</p>
+      <div>CHOOSE YOUR</div>
+      <div>WORLD</div>
   </div>
 </div>
 
@@ -11,7 +11,7 @@
 
         <ul *ngIf="!click">
           <li *ngFor="let level of levels">
-              <div class="level" (click)="goPlanetPage(level)" > 
+              <div class="level" (click)="goPlanetPage(level)" [style.pointer-events]="blockClickIfIsLocked(level)"> 
                 <app-level [isLocked]="level.isLocked" 
                            [planetName]="level.planetName">
                 </app-level>

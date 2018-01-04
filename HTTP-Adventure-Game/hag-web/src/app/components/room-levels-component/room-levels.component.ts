@@ -20,27 +20,31 @@ export class RoomLevelsComponent implements OnInit{
   ngOnInit(): void {
     this.click = false;
     this.levels = new Array<Levels>();
-    this.levels.push(new Levels("Mercury",true));
-    this.levels.push(new Levels("Venus",true));    
+    this.levels.push(new Levels("Mercury",false));
+    this.levels.push(new Levels("Venus",false));    
     this.levels.push(new Levels("Earth",false));
     this.levels.push(new Levels("Mars",true));
-    this.levels.push(new Levels("Jupiter",false));
-    this.levels.push(new Levels("Saturn",false));
+    this.levels.push(new Levels("Jupiter",true));
+    this.levels.push(new Levels("Saturn",true));
     this.levels.push(new Levels("Uranus",true));
     this.levels.push(new Levels("Neptun",true));
-    this.levels.push(new Levels("Pluto",false));
+    this.levels.push(new Levels("Pluto",true));
   }
 
-  // private startLevel():void{
-  //   this.router.navigate([Constants.StartGamePath]) 
-  // }
-
   public goPlanetPage(planet): void{
-    this.click = true;
-    this.planetName = planet.planetName;
+    if (!planet.isLocked) {
+      this.click = true;
+      this.planetName = planet.planetName;
+    }
   }
 
   public seeAllPlanets(): void{
     this.click = false;
+  }
+
+  private blockClickIfIsLocked(planet): any {
+    if (planet.isLocked) {
+      return 'none';
+    }
   }
 }

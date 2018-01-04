@@ -1,5 +1,6 @@
 
-<div class="planet">
+<div class="planet" [ngStyle]="{'filter':addFilter()}" 
+  [class.planetHover]="mouseOvered && !isLocked" (mouseout)="mouseOvered=false" (mouseover)="mouseOvered=true">
   <svg viewBox="0 0 100 100">
     <use [attr.xlink:href]="planet"></use>
  </svg>

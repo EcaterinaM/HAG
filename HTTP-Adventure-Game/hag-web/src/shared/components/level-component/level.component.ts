@@ -40,4 +40,10 @@ export class LevelComponent {
       this.planet = "./assets/Planets/Venus.svg#venus";
     } 
   }
+
+  private addFilter(): any {
+    if (this.isLocked) {
+      return 'grayscale(100%)';
+    }
+  }
 }
