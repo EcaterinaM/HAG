@@ -87,14 +87,13 @@
 .bigPlanet {
     margin-top: 360px;
     .planet {
-        width: 30%;
+        width: 100%;
         height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: auto;
         opacity: 1 !important;
-        // cursor: pointer;
 
         svg{
             width: 100%;

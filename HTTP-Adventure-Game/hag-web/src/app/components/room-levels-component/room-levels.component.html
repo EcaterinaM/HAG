@@ -13,14 +13,18 @@
           <li *ngFor="let level of levels">
               <div class="level" (click)="goPlanetPage(level)" [style.pointer-events]="blockClickIfIsLocked(level)"> 
                 <app-level [isLocked]="level.isLocked" 
-                           [planetName]="level.planetName">
+                           [planetName]="level.planetName"
+                           [click]="click">
                 </app-level>
               </div>
           </li>
         </ul>
 
         <div *ngIf="click" class="bigPlanet">
-          <app-planet [planetName]="planetName"></app-planet>
+          <app-level [isLocked]="isLocked" 
+                     [planetName]="planetName"
+                     [click]="click">
+          </app-level>
           <div *ngIf="click" class='container-back' (click)="seeAllPlanets()">
               <div class="route"><BACK</div>
             </div>

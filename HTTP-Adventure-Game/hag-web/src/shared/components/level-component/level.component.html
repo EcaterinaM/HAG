@@ -1,7 +1,374 @@
 
-<div class="planet" [ngStyle]="{'filter':addFilter()}" 
-  [class.planetHover]="mouseOvered && !isLocked" (mouseout)="mouseOvered=false" (mouseover)="mouseOvered=true">
-  <svg viewBox="0 0 100 100">
-    <use [attr.xlink:href]="planet"></use>
- </svg>
+<div class="planets" [ngStyle]="{'filter':addFilter()}" 
+  [class.planetHover]="mouseOvered && !isLocked && !click" (mouseout)="mouseOvered=false" (mouseover)="mouseOvered=true">
+
+<div class="planet" *ngIf="planetName == 'Neptun'">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="neptun" viewBox="0 0 576.71 657"><defs><linearGradient id="linear-gradient" y1="367.83" x2="268.94" y2="367.83" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a171b" stop-opacity="0.5"/><stop offset="0.46" stop-color="#1a171b" stop-opacity="0.14"/><stop offset="1" stop-color="#1a171b" stop-opacity="0"/></linearGradient></defs><title>Asset 3</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+      
+      <a xlink:href="start-game/8/1">
+      <circle cx="288.36" cy="368.64" r="288.36" style="fill:#6c8ec1"/>
+      </a>
+      <path d="M138.84,367.83c0,196,130.09,281,130.09,281C120.41,648.85,0,523,0,367.83s120.41-281,268.94-281C268.94,86.8,138.84,178.95,138.84,367.83Z" style="fill:url(#linear-gradient)"/><ellipse cx="455.47" cy="557.5" rx="46.8" ry="21.5" style="fill:#2c4974"/><ellipse cx="92.67" cy="510" rx="18" ry="11.67" style="fill:#2c4974"/><ellipse cx="128.67" cy="203" rx="18" ry="11.67" style="fill:#2c4974"/><ellipse cx="47.33" cy="347.33" rx="45.67" ry="32.33" style="fill:#2c4974"/><ellipse cx="516.83" cy="285.83" rx="44.17" ry="28.83" style="fill:#2c4974"/><line x1="196.1" x2="196.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="372.06 74.97 195.99 74.97 195.99 13 372.06 13 351.41 43.56 372.06 74.97" style="fill:#f6f6f6"/><text transform="translate(205.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">NEPTUNE</text>
+      
+      <a xlink:href="start-game/8/2">
+      <circle cx="196.5" cy="147.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      
+      <a xlink:href="start-game/8/3">
+      <circle cx="372.5" cy="415.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="207.5" y="188.5" width="45" height="12" rx="6" ry="6" transform="translate(202.23 494.43) rotate(-124.93)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><ellipse cx="65.67" cy="315" rx="18" ry="11.67" style="fill:#2c4974"/>
+      
+      <a xlink:href="start-game/8/4">
+      <circle cx="268.5" cy="240.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="207.5" y="280.5" width="45" height="12" rx="6" ry="6" transform="translate(-134.92 329.13) rotate(-57.91)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/8/5">
+      <circle cx="195.5" cy="335.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="159.5" y="386.5" width="45" height="12" rx="6" ry="6" transform="translate(-187.9 616.9) rotate(-96.37)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/8/6">
+      <circle cx="198.5" cy="448.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="222.5" y="400.5" width="45" height="12" rx="6" ry="6" transform="translate(-229.55 398.07) rotate(-57.91)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="254.5" y="351.5" width="45" height="12" rx="6" ry="6" transform="matrix(0.53, -0.85, 0.85, 0.53, -173.04, 402.22)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="287.5" y="303.5" width="45" height="12" rx="6" ry="6" transform="translate(-127.72 292.32) rotate(-42.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/8/7">
+      <circle cx="362.5" cy="301.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="357.5" y="349.5" width="45" height="12" rx="6" ry="6" transform="translate(-20.85 687.32) rotate(-82.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="339.5" y="465.5" width="45" height="12" rx="6" ry="6" transform="translate(-45.17 904.59) rotate(-99.25)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="374.5" y="484.5" width="45" height="12" rx="6" ry="6" transform="translate(-175.13 224.3) rotate(-26.06)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="419.5" y="456.5" width="45" height="12" rx="6" ry="6" transform="translate(-196.49 422.41) rotate(-42.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/8/8">
+      <circle cx="486.5" cy="421.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <ellipse cx="524.67" cy="257" rx="18" ry="11.67" style="fill:#2c4974"/><ellipse cx="428.67" cy="536" rx="18" ry="11.67" style="fill:#2c4974"/>
+      </g></g>
+      </svg>
+  </div>
+
+  <div class="planet" *ngIf="planetName == 'Jupiter'">
+  <svg id="jupiter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576.71 657"><defs><linearGradient id="linear-gradient" y1="367.83" x2="268.94" y2="367.83" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a171b" stop-opacity="0.5"/><stop offset="0.46" stop-color="#1a171b" stop-opacity="0.14"/><stop offset="1" stop-color="#1a171b" stop-opacity="0"/></linearGradient></defs><title>Asset 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+    
+    <a xlink:href="start-game/5/1">
+    <circle cx="288.36" cy="368.64" r="288.36" style="fill:#c45a3d"/>
+    </a>
+    <path d="M138.84,367.83c0,196,130.09,281,130.09,281C120.41,648.85,0,523,0,367.83s120.41-281,268.94-281C268.94,86.8,138.84,178.95,138.84,367.83Z" style="fill:url(#linear-gradient)"/><line x1="196.1" x2="196.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="372.06 74.97 195.99 74.97 195.99 13 372.06 13 351.41 43.56 372.06 74.97" style="fill:#f6f6f6"/><text transform="translate(221.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">JUPITER</text>
+    
+    <a xlink:href="start-game/5/2">
+    <circle cx="196.5" cy="147.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="233.5" y="158.5" width="45" height="12" rx="6" ry="6" transform="translate(481.53 368.79) rotate(-170.55)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/5/3">
+    <circle cx="319.5" cy="175.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="349.5" y="201.5" width="45" height="12" rx="6" ry="6" transform="translate(521.19 606.48) rotate(-139.66)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/5/4">
+    <circle cx="423.5" cy="250.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    
+    <a xlink:href="start-game/5/5">
+    <circle cx="442.5" cy="497.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <path d="M276.74,256.59c-26,4.42-63.38-5.74-72.88-7.51-15.15-2.83-21.2-7.46-66,10.55-16.51,6.63-39.57,12.23-62.13,16.65C49.25,281.47,23.5,285,9.84,286.79,9.33,291.42,6.63,301.3,7,306l2.57-5.19c24.06-8.43,40.69-6.05,54-5.18,28.39,1.86,35.68-3.85,114.88-11.69,43.54-4.31,53.41-5.38,95.6-9.59,65.78-6.56,67.67-17.65,89.31-18.58a85.73,85.73,0,0,0-16.74-29.38C300.36,228.69,319.6,249.3,276.74,256.59Z" style="fill:#f8e2b2"/><path d="M486.74,336.59c-26,4.42-63.38-5.74-72.88-7.51-15.15-2.83-21.2-7.46-66,10.55-16.51,6.63-39.57,12.23-62.13,16.65-26.45,5.19-52.19,8.76-65.85,10.51-.51,4.62-3.21,14.5-2.84,19.21l2.57-5.19c24.06-8.43,40.69-6.05,54-5.18,28.39,1.86,35.68-3.85,114.88-11.69,43.54-4.31,53.41-5.38,95.6-9.59C549.85,347.8,553.36,337.93,575,337c-1.83-8,.37-29.83-8-40C520.72,299.3,529.6,329.3,486.74,336.59Z" style="fill:#f8e2b2"/><rect x="354.5" y="285.5" width="45" height="12" rx="6" ry="6" transform="translate(849.24 355.45) rotate(150)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="302.5" y="306.5" width="45" height="12" rx="6" ry="6" transform="translate(707.23 551.63) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="245.5" y="318.5" width="45" height="12" rx="6" ry="6" transform="translate(596.91 587.07) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/5/6">
+    <circle cx="212.5" cy="332.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="155.5" y="373.5" width="45" height="12" rx="6" ry="6" transform="translate(581.57 266.2) rotate(99.45)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="169.5" y="422.5" width="45" height="12" rx="6" ry="6" transform="translate(123.72 893.06) rotate(-147.5)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/5/7">
+    <circle cx="248.5" cy="454.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="281.5" y="479.5" width="45" height="12" rx="6" ry="6" transform="translate(356.07 1055.95) rotate(-153.16)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="343.5" y="501.5" width="45" height="12" rx="6" ry="6" transform="translate(693.15 1040.87) rotate(-175.72)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><path d="M95,583c3.26,1.76,6.86,7.29,13,11,5.95,3.6,15.52,12.36,18,14,29.81,19.77,30.4,14.42,34.44,12.66,2.65-1.15,6.2-4.89,6.56-18.66,10-10.19,39.44-18.41,71.54-25.59,29.22-6.53,51.47-19.91,72.17-22.91a51.77,51.77,0,0,0,6.29-7.24c-21.83,3.13-64.86,21.34-82.52,24.14C118.55,588.79,101.91,577,95,583Z" style="fill:#792f10"/><ellipse cx="104.5" cy="359" rx="29.5" ry="9" style="fill:#792f10"/><ellipse cx="397.5" cy="602" rx="25.5" ry="8" style="fill:#792f10"/><ellipse cx="507" cy="271" rx="28" ry="5" style="fill:#792f10"/>
+    </g></g>
+  </svg>
+  </div>
+
+  <div class="planet" *ngIf="planetName == 'Earth'">
+    <svg id="earth" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 577 657"><defs><linearGradient id="linear-gradient" x1="1" y1="368.83" x2="269.94" y2="368.83" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a171b" stop-opacity="0.5"/><stop offset="0.46" stop-color="#1a171b" stop-opacity="0.14"/><stop offset="1" stop-color="#1a171b" stop-opacity="0"/></linearGradient></defs><title>Asset 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,368.64C0,209.39,129.1,80.29,288.36,80.29s288.36,129.1,288.36,288.36S447.61,657,288.36,657" style="fill:#73d1d9"/><path d="M288.36,656C129.1,656,0,526.9,0,367.64" style="fill:#73d1d9"/><path d="M83,270c4.15,3.9-1.08,17.3.53,22.76,1.36,4.61,6.07,13.72,10.06,16.41,2,1.35,7.58,3,9.52,1.59,1.51-1.11,1.63-5.63,1.06-7.41-1.35-4.19-10.54-8.62-12.18-12.7-1.53-3.81-2.77-13.38,0-16.41,1-1.08,4.72-1.47,5.83-.53,3,2.58-.51,12.22,1.06,15.88,2.7,6.28,17.89,13.31,18.53,20.11.23,2.49-5.23,6-5.29,8.47-.13,5.15,5.86,15,10.06,18s16.28,6.61,20.64,3.7c1-.68,0-4.12,1.06-4.77,2-1.23,7.49.36,9,2.12,1.12,1.31-.68,5.65.53,6.88,3,3,13.17-.39,16.94,1.59,5.65,3,10.76,16.6,16.4,19.58,4.7,2.49,17.3-1.53,21.17,2.12,2.6,2.45,2,11.05.53,14.29-1.84,3.93-11.71,6.76-13.76,10.58-2.69,5-3.2,17.29-1.58,22.76,2.43,8.25,17.47,19.53,20.64,27.52.88,2.23-.78,8,1.05,9.53s6.86-1.21,9-.53c4.67,1.47,13.27,7.74,15.35,12.17,5.12,10.9-8.85,39-1.06,48.16.94,1.11,4.88-1.11,5.82,0,3.21,3.78-4.42,14.78-3.18,19.58.8,3.1,6.89,7,7.94,10.06,2,5.88-.58,18.68,0,24.87,1,10.93,1.56,21.43,28.58,33.34,3.68,1.62,18.18,2.71,15.88-2.64-1.44-3.36-9.57-6.55-10.59-10.06-1.22-4.19,6.69-13.33,4.24-16.94-1.12-1.66-6.2-.07-7.94-1.06-1.48-.83-4.37-3.6-4.24-5.29.17-2.15,5.49-3.85,6.36-5.82a4.63,4.63,0,0,0,0-3.18c-1-1.59-5.69-1.7-6.88-3.18-.75-.93-.89-4,0-4.77,6.45-5.67,19,1.75,30.16-16.4,4-6.45,16.39-17,18-24.35,1.09-5-5.39-15.1-4.23-20.11.34-1.47,2.3-4.21,3.71-4.77,3.86-1.52,12.35,3.55,16.4,2.65,3.44-.76,9.84-4.91,11.65-7.93,4.57-7.65.1-27.31,3.71-35.46,2-4.54,11.46-10.18,13.23-14.82.8-2.1,1.85-7.71,0-9-4.26-3-2.35-2.12-16.41-12.7-5.94-4.47-22.27-1.61-29.63-2.65-3.94-.55-12.71-2.45-14.82-5.82-1.83-2.92,2-10.43,1.06-13.76-.85-3.12-4.59-9-7.41-10.59-3.82-2.14-13.66,1.1-17.47-1.06-4.47-2.53-7.1-14.54-11.64-16.93-1.29-.68-4.66-.88-5.82,0-.77.58-.3,3.11-1.06,3.7-3.13,2.45-12.41,2.45-15.88.53-7.55-4.19-4.36-12.71-34.4,3.18-5,2.63-18.5,1-22.23-3.18-3.86-4.36,3.14-18.77-.53-23.29-2.57-3.16-13.93-.12-15.88-3.7s6.93-11.24,5.29-14.82c-.77-1.68-5.05-2.87-6.88-2.65-5.76.69-13.46,11.71-19.05,13.23-10.19,2.78-45.71-19.47,9-41.28,8.49-3.38,30.1-8.09,36.52-1.59,1.68,1.7-1.77,7.49-.53,9.53,1.36,2.22,7.4,5.74,9.52,4.23,3.26-2.3-.28-12.35,1.59-15.88,3.55-6.73,19.52-13,23.29-19.58.8-1.4.23-5,1.06-6.35,5.15-8.58,24.84-17.12,31.76-24.35,3.35-3.5,6.39-14.74,11.11-15.88,2.19-.53,5.72,4.56,7.94,4.23,1.48-.22,4.43-2.75,4.23-4.23-.28-2.12-6.39-2.36-7.41-4.24-1.22-2.24.53-10.06,10.06-1.59s11.57-1.26,15.34-2.11c1.11-.25,3.66,1.51,3.7,2.64s-2.73,1.71-3.17,2.65c-.73,1.56-1,5.49,0,6.88,2.53,3.48,12.6,7.31,16.4,5.29,2.07-1.1,3.68-6.9,2.65-9-1.13-2.3-8.09-1.59-9.53-3.7a4.66,4.66,0,0,1,0-3.71c1-1.59,5.86-1.58,6.88-3.18,1.14-1.78.93-6.56,0-8.46-1.32-2.71-8.06-4.78-9.52-7.41-1.87-3.37,1.74-13.4-1.59-15.35-2.87-1.67-8.89,4.78-12.17,5.29-1.31.2-4.4.46-5.29-.53-1.51-1.67,1.28-7.15,0-9-2.82-4.06-13.63-7.52-18.53-6.88-2.73.36-7.73,3.91-9,6.35-2.31,4.46,3.27,16.29,0,20.11-2.26,2.64-10.92.12-13.76,2.12s-4,10.56-6.88,12.7c-1.09.8-4.25,1.91-5.29,1.06-3-2.43,2.68-12.6,0-15.35-4.42-4.53-46.33-3.49-4.76-24.88,4.37-2.25,13.55-10.06,18-7.94,1.85.89.36,6.88,2.12,7.94,1.51.91,5.67-.3,6.88-1.59s-.21-5.36,1.06-6.35,4.89,1.17,6.35.53c3.54-1.55,6.35-10,9.52-12.17,4.18-2.91,20.11-3.18,20.11-3.18s3.94,3.69,3.71,5.29c-.71,4.85-16.38,7.39-15.35,12.17,1.27,5.87,17.87,8.42,23.28,5.82,1.71-.82,1.62-5.79,3.17-6.88,2.61-1.83,10.28,1,12.71-1.06,1.66-1.41,3.16-6.55,2.11-8.47-.8-1.47-5.33-.79-6.35-2.12-1.37-1.79-.53-9-.53-9s-37.14-31.14-51.34-4.23c-1.24,2.35.91,8.8-1.06,10.58s-8.65,1.81-10.58,0c-1.55-1.45-1.41-6.53-.53-8.46,1.17-2.58,9.83-4.18,9-6.88-1.45-4.69-15.25-3.36-19.58-1.06-2,1.09-5.79,5.87-4.76,7.94.53,1.07,3.9-.31,4.76.53,1.34,1.3,2.31,6,1.06,7.41-2,2.26-9.91-2.57-12.17-.53-.81.73-.21,3.55-1.06,4.23-3.5,2.82-14.87,3.77-18,.53-1.38-1.43-1.06-6.75.53-7.94,2.54-1.9,9.86,1.42,12.71,0,2.37-1.18,6.7-5.84,6.35-8.47-.2-1.5-3.26-3.76-4.76-3.71s-3.57,3.17-4.76,4.24c-2.49,2.23-.19,2.46-11.54-6.77-3.77-3.06-19.43-.25-19.43-.25l-10.09,10.09,8.58.25-3,7.26S206,141,208.42,143.5c.65.67.11,3-.53,3.71-2.78,2.94-15.88,3.18-15.88,3.18l-4.76-7.94-11.64-3.17-8.17-1.17A268.37,268.37,0,0,0,70.84,244.54l1,2.16S73,260.55,83,270Z" style="fill:#3ea92a"/><path d="M270.47,230.1c-2.77,0-5,1.66-5,3.71s2.25,3.7,5,3.7,5-1.66,5-3.7S273.25,230.1,270.47,230.1Z" style="fill:#3ea92a"/><path d="M286.61,228c-1.55,1-6.32-1.5-7.41,0s.85,5.25,2.11,6.35,4.53,1.77,5.82,1.06.81-4.73,2.12-5.29,4.11,2.92,5.29,2.12c1.86-1.26,1.59-7.41,0-9-1-1-4.6-.79-5.82,0S287.71,227.27,286.61,228Z" style="fill:#3ea92a"/><path d="M464.83,180.35c1.57,1.86,1.63,7.73,3.71,9,2.41,1.47,8.89-3.87,11.11-2.11s2.61,9.6.54,11.64c-3.69,3.64-16.14-1-20.65,1.59-4,2.24-6.49,12.81-10.58,14.82-3,1.46-10.7-2.66-13.23-.53-2.35,2-3.31,9.63-1.58,12.17.61.9,3.56.2,4.23,1.06,1.22,1.57,1.44,6.57,0,7.94-3.56,3.37-14.68-1.25-19.58-1.06-3,.12-8.71,1-8.47,8.47.13,3.87-.4,12.41,2.12,15.35,1.8,2.1,7.83,3.38,10.58,3.18,4.66-.34,13.31-5,16.94-7.94,4.11-3.34,7.79-15,12.7-16.94,3-1.2,9.69,3.26,12.7,2.12,2.55-1,4.17-8.82,6.88-8.47,2,.27.9,6.29,2.13,7.94,3.16,4.24,16,6.21,18,11.11,1,2.53-4,8.25-2.65,10.58a2.44,2.44,0,0,0,2.11.53c3.12-1.11,7.94-10.58,7.94-10.58s-11.79-8.64-14.29-12.7c-1.08-1.75-3.33-6.28-2.11-7.94,1.64-2.25,8.5-1.47,11.11-.53,3.53,1.26,9.58,6.64,11.12,10.06,1.21,2.68.18,9.07,1.59,11.64,1.67,3,7.45,10.49,10.58,9,4.44-2.12,1.06-11.64,10.06-16.94,0,0-.51,8.92.53,11.64,1,2.55,4.38,7.38,6.88,8.47,4.89,2.14,21.3-1.36,21.3-1.36a268,268,0,0,0-77.86-104.37l-2.72,5.7S451.94,165.09,464.83,180.35Z" style="fill:#3ea92a"/><path d="M564.42,283.12s-23.11,3.44-30.26,1c-3.11-1.08-7-7.34-10.06-8.47-3.35-1.22-11.49-2.22-14.29,0-1.38,1.1-.3,5.68-1.59,6.88-6.17,5.76-20.82,3.3-32.82-7.94-2.61-2.44,2.5-11.74,0-14.29-5.48-5.59-23.84-.47-31.23,2.12-2,.69-4.89,4.12-6.88,4.77-5,1.65-16.15-1.15-21.17.53-3.24,1.08-9.69,4.83-11.11,7.94s1.5,10.29,0,13.23c-4.08,8-25.84,12.78-29.11,21.17-.74,1.89.15,6.52,1.59,7.94,1.06,1,5-.15,5.82,1.06,1.47,2.08.25,8.3-1.59,10.06-.87.83-4-.35-4.76.53-3.93,4.29-2.49,17.8-.53,23.28,3.35,9.36,16.81,26.21,25.93,30.17,2.8,1.21,9.89,1.49,12.17-.53.6-.53-.09-2.66.53-3.18,3.84-3.25,15.7,2.42,20.11,0,1.51-.83,2.2-5,3.7-5.82,2.87-1.65,10.27-2,13.23-.53,2.3,1.15,3.55,7.27,5.82,8.47,3.16,1.66,11.69-2.45,14.29,0,4.64,4.35-.19,19.29,1.59,25.4,2.37,8.13,16,21.18,16.4,29.64.23,5.5-7.85,14.72-9,20.11-.5,2.33-1,7.38,0,9.53,1.25,2.64,7.79,4.76,9,7.41,2.14,4.7-2.19,15.76-.53,20.64,1.15,3.38,7.81,7.74,9,11.11,1.81,5.11,0,21.7,0,21.7h23a267.3,267.3,0,0,0,42.76-243.88Z" style="fill:#3ea92a"/><line x1="196.1" x2="196.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="372.06 74.97 195.99 74.97 195.99 13 372.06 13 351.41 43.56 372.06 74.97" style="fill:#f6f6f6"/><text transform="translate(225.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">EA<tspan x="38.14" y="0" style="letter-spacing:-0.014997209821428572em">R</tspan><tspan x="56.92" y="0" style="letter-spacing:0.00001743861607142857em">TH</tspan></text>
+    
+    <a xlink:href="start-game/3/1" >
+    <circle cx="196.5" cy="126.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect id="red" x="233.5" y="126.5" width="45" height="12" rx="6" ry="6" transform="translate(512 265) rotate(-180)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/3/2">
+    <circle cx="374.5" cy="149.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="374.5" y="193.5" width="45" height="12" rx="6" ry="6" transform="translate(385.28 643.65) rotate(-115.17)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/3/3">
+    <circle cx="423.5" cy="250.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="354.5" y="285.5" width="45" height="12" rx="6" ry="6" transform="translate(849.24 355.45) rotate(150)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="302.5" y="306.5" width="45" height="12" rx="6" ry="6" transform="translate(707.23 551.63) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="245.5" y="318.5" width="45" height="12" rx="6" ry="6" transform="translate(596.91 587.07) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/3/4">
+    <circle cx="141.5" cy="370.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="182.5" y="337.5" width="45" height="12" rx="6" ry="6" transform="translate(528.44 578.88) rotate(156.87)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="164.5" y="405.5" width="45" height="12" rx="6" ry="6" transform="translate(123.64 859.03) rotate(-147.5)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/3/5">
+    <circle cx="248.5" cy="454.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <rect x="281.5" y="479.5" width="45" height="12" rx="6" ry="6" transform="translate(356.07 1055.95) rotate(-153.16)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="343.5" y="501.5" width="45" height="12" rx="6" ry="6" transform="translate(693.15 1040.87) rotate(-175.72)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="295.5" y="130.5" width="45" height="12" rx="6" ry="6" transform="matrix(-0.99, -0.16, 0.16, -0.99, 609.28, 323.34)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+    
+    <a xlink:href="start-game/3/6">
+    <circle cx="437.5" cy="512.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+    </a>
+    <path d="M139.84,368.83c0,196,130.09,281,130.09,281C121.41,649.85,1,524,1,368.83s120.41-281,268.94-281C269.94,87.8,139.84,179.95,139.84,368.83Z" style="fill:url(#linear-gradient)"/>
+    </g></g>
+    </svg>
+  </div>
+
+  <div class="planet" *ngIf="planetName == 'Mars'">
+    <svg id="mars" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576.71 657"><defs><linearGradient id="linear-gradient" y1="367.83" x2="268.94" y2="367.83" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a171b" stop-opacity="0.5"/><stop offset="0.46" stop-color="#1a171b" stop-opacity="0.14"/><stop offset="1" stop-color="#1a171b" stop-opacity="0"/></linearGradient></defs><title>Asset 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+      
+      <a xlink:href="start-game/4/1">
+      <circle cx="288.36" cy="368.64" r="288.36" style="fill:#e27f7f"/>
+      </a>
+      <path d="M138.84,367.83c0,196,130.09,281,130.09,281C120.41,648.85,0,523,0,367.83s120.41-281,268.94-281C268.94,86.8,138.84,178.95,138.84,367.83Z" style="fill:url(#linear-gradient)"/><line x1="196.1" x2="196.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="372.06 74.97 195.99 74.97 195.99 13 372.06 13 351.41 43.56 372.06 74.97" style="fill:#f6f6f6"/><text transform="translate(233.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">MARS</text>
+      
+      <a xlink:href="start-game/4/2">
+      <circle cx="196.5" cy="147.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="233.5" y="158.5" width="45" height="12" rx="6" ry="6" transform="translate(481.53 368.79) rotate(-170.55)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/4/3">
+      <circle cx="319.5" cy="175.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="349.5" y="201.5" width="45" height="12" rx="6" ry="6" transform="translate(521.19 606.48) rotate(-139.66)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/4/4">
+      <circle cx="423.5" cy="250.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      
+      <a xlink:href="start-game/4/5">
+      <circle cx="442.5" cy="497.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="354.5" y="285.5" width="45" height="12" rx="6" ry="6" transform="translate(849.24 355.45) rotate(150)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="302.5" y="306.5" width="45" height="12" rx="6" ry="6" transform="translate(707.23 551.63) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="245.5" y="318.5" width="45" height="12" rx="6" ry="6" transform="translate(596.91 587.07) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/4/6">
+      <circle cx="212.5" cy="332.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="155.5" y="373.5" width="45" height="12" rx="6" ry="6" transform="translate(581.57 266.2) rotate(99.45)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="169.5" y="422.5" width="45" height="12" rx="6" ry="6" transform="translate(123.72 893.06) rotate(-147.5)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/4/7">
+      <circle cx="248.5" cy="454.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="281.5" y="479.5" width="45" height="12" rx="6" ry="6" transform="translate(356.07 1055.95) rotate(-153.16)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="343.5" y="501.5" width="45" height="12" rx="6" ry="6" transform="translate(693.15 1040.87) rotate(-175.72)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><path d="M501,405.88c-92.77-.24-168,10-168,22.36s75.21,22.36,168,22.36c22.18,0,43.33-.58,62.71-1.61,6.16-12.9,9-31.81,11.3-46C577.16,403.11,529.3,406,501,405.88Z" style="fill:#d84443"/><path d="M111.46,256.43c98.41,3.75,178.57-3.21,179-15.55s-78.92-25.39-177.34-29.14c-23.53-.9-46-1.18-66.58-.92C39.56,223.46,28,236.93,25,251,49.05,253.44,82.6,255.33,111.46,256.43Z" style="fill:#d84443"/><path d="M153,347.66c0-9-24.63-16.34-55-16.34s-55,7.32-55,16.34S67.63,364,98,364,153,356.69,153,347.66Z" style="fill:#d84443"/><path d="M241,554.66c0-9-24.63-16.34-55-16.34s-55,7.32-55,16.34S155.63,571,186,571,241,563.69,241,554.66Z" style="fill:#d84443"/>
+      </g></g>
+      </svg>
+  </div>
+
+  <div class="planet" *ngIf="planetName == 'Mercury'">
+    <svg id="mercury" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576.71 657"><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,368.64C0,209.39,129.1,80.29,288.36,80.29s288.36,129.1,288.36,288.36S447.61,657,288.36,657" style="fill:#ba935c"/><path d="M288.36,656C129.1,656,0,526.9,0,367.64" style="fill:#ba935c"/><line x1="196.1" x2="196.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="372.06 74.97 195.99 74.97 195.99 13 372.06 13 351.41 43.56 372.06 74.97" style="fill:#f6f6f6"/><text transform="translate(206.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">ME<tspan x="45.19" y="0" style="letter-spacing:-0.024989536830357144em">R</tspan><tspan x="63.7" y="0" style="letter-spacing:0.00001743861607142857em">CU</tspan><tspan x="104.38" y="0" style="letter-spacing:-0.060023716517857144em">R</tspan><tspan x="121.91" y="0">Y</tspan></text>
+      
+      <a xlink:href="start-game/1/1">
+      <circle attr.fill="{{mercury11}}" id="11" cx="196.5" cy="126.5" r="26" style="stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="233.5" y="126.5" width="45" height="12" rx="6" ry="6" transform="translate(512 265) rotate(-180)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/1/2">
+      <circle attr.fill="{{mercury12}}" cx="374.5" cy="149.5" r="26" style="stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="295.5" y="183.5" width="45" height="12" rx="6" ry="6" transform="translate(-51.55 211.09) rotate(-34.13)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/1/3">
+      <circle attr.fill="{{mercury13}}" cx="268.5" cy="223.5" r="26" style="stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="184.5" y="258.5" width="45" height="12" rx="6" ry="6" transform="translate(518.52 390.06) rotate(150)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="457.5" y="427.5" width="45" height="12" rx="6" ry="6" transform="translate(986.4 31.16) rotate(99.45)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="266.5" y="310.5" width="45" height="12" rx="6" ry="6" transform="translate(578 633) rotate(-180)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/1/4">
+      <circle attr.fill="{{mercury14}}" cx="153.5" cy="301.5" r="26" style="stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="195.5" y="308.5" width="45" height="12" rx="6" ry="6" transform="translate(436 629) rotate(-180)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="377.5" y="349.5" width="45" height="12" rx="6" ry="6" transform="translate(546.38 870.24) rotate(-147.5)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/1/5">
+      <circle attr.fill="{{mercury15}}" cx="357.5" cy="314.5" r="26" style="stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="431.5" y="383.5" width="45" height="12" rx="6" ry="6" transform="translate(683.25 942.01) rotate(-153.16)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="435.5" y="478.5" width="45" height="12" rx="6" ry="6" transform="translate(1097.09 294.57) rotate(116.84)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="295.5" y="130.5" width="45" height="12" rx="6" ry="6" transform="translate(609.28 323.34) rotate(-170.55)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/1/6">
+      <circle attr.fill="{{mercury16}}" cx="445.5" cy="538.5" r="26" style="stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <ellipse cx="157.59" cy="204.19" rx="23.78" ry="30.27" style="fill:#ab6a2a"/><ellipse cx="440.82" cy="231.21" rx="23.78" ry="18.38" style="fill:#ab6a2a"/><ellipse cx="278.66" cy="283.82" rx="17.3" ry="19.46" transform="translate(-80.24 455.28) rotate(-71.06)" style="fill:#ab6a2a"/><ellipse cx="331.63" cy="453.9" rx="35.67" ry="27.02" style="fill:#ab6a2a"/><ellipse cx="471.73" cy="335.96" rx="20.54" ry="18.38" style="fill:#ab6a2a"/><ellipse cx="511.92" cy="468.25" rx="19.46" ry="17.3" style="fill:#ab6a2a"/><ellipse cx="367.31" cy="586.86" rx="25.95" ry="15.14" style="fill:#ab6a2a"/><ellipse cx="232.18" cy="558.76" rx="16.22" ry="17.3" style="fill:#ab6a2a"/><ellipse cx="162.99" cy="451.74" rx="37.84" ry="24.86" style="fill:#ab6a2a"/><ellipse cx="92.72" cy="334.99" rx="19.46" ry="18.38" style="fill:#ab6a2a"/><ellipse cx="131.64" cy="531.73" rx="11.89" ry="17.29" transform="translate(-415.75 552.65) rotate(-78.28)" style="fill:#ab6a2a"/>
+      </g></g>
+      </svg>
+  </div>
+
+  <div class="planet" *ngIf="planetName == 'Pluto'">
+    <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="pluto" viewBox="0 0 576.71 642"><defs><linearGradient id="linear-gradient" y1="352.83" x2="268.94" y2="352.83" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a171b" stop-opacity="0.5"/><stop offset="0.46" stop-color="#1a171b" stop-opacity="0.14"/><stop offset="1" stop-color="#1a171b" stop-opacity="0"/></linearGradient></defs><title>Asset 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+      
+      <a xlink:href="start-game/9/1">
+      <circle cx="288.36" cy="353.64" r="288.36" style="fill:#a5a0a0"/>
+      </a>
+      <path d="M254.14,216.91c0-24.73-81.56-48.36-185.72-49-12.5,12.82-24.09,28.59-31,44-.64,1.43-6.46,10.58-11.4,21.18-2.13,4.56-4.15,11.54-4.89,13-3.73,7.51-2.22,6.66-4.89,11.4,3.29.24,8.31,5.55,14.42,5.6,9,.07,15.29-.71,30.65-.71C167.83,262.41,254.14,242,254.14,216.91Z" style="fill:#696c70"/><path d="M138.84,352.83c0,196,130.09,281,130.09,281C120.41,633.85,0,508,0,352.83s120.41-281,268.94-281C268.94,71.8,138.84,163.95,138.84,352.83Z" style="fill:url(#linear-gradient)"/><path d="M545.22,488.25a573.1,573.1,0,0,0-75.76-4.79c-89.63,0-162.29,18.55-162.29,41.44s72.66,41.44,162.29,41.44c4.18,0,8.31-.06,12.41-.13A344.38,344.38,0,0,0,545.22,488.25Z" style="fill:#696c70"/><line x1="196.1" x2="196.1" y2="104.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="331.28 61.97 195.99 61.97 195.99 5.9 331.28 5.9 315.41 33.55 331.28 61.97" style="fill:#f6f6f6"/><text transform="translate(203.75 44.53)" style="font-size:32px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">PLU<tspan x="65.06" y="0" style="letter-spacing:-0.024993896484375em">T</tspan><tspan x="83.01" y="0">O</tspan></text>
+      
+      <a xlink:href="start-game/9/2">
+      <circle cx="196.5" cy="132.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="229.5" y="152.5" width="45" height="12" rx="6" ry="6" transform="translate(85.4 -88.22) rotate(23.8)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="284.5" y="176.5" width="45" height="12" rx="6" ry="6" transform="translate(99.76 -108.37) rotate(23.8)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="338.5" y="193.5" width="45" height="12" rx="6" ry="6" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/9/3">
+      <circle cx="420.5" cy="199.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="362.5" y="240.5" width="45" height="12" rx="6" ry="6" transform="translate(-69.93 291.47) rotate(-38.27)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="315.5" y="270.09" width="45" height="12" rx="6" ry="6" transform="translate(-70.48 122.42) rotate(-18.63)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/9/4">
+      <circle cx="281.5" cy="281.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="200.5" y="286.5" width="45" height="12" rx="6" ry="6" transform="translate(-39.09 34.44) rotate(-8.12)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/9/5">
+      <circle cx="160.5" cy="300.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="80.5" y="301.5" width="45" height="12" rx="6" ry="6" transform="translate(-113.86 66.38) rotate(-23.45)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="65.5" y="340.5" width="45" height="12" rx="6" ry="6" transform="translate(-194.86 565.12) rotate(-113.45)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/9/6">
+      <circle cx="170.5" cy="419.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="91.5" y="386.5" width="45" height="12" rx="6" ry="6" transform="translate(-51.94 766.02) rotate(-139.85)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="205.5" y="398.5" width="45" height="12" rx="6" ry="6" transform="translate(-117.25 94.01) rotate(-18.63)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="328.5" y="357.5" width="45" height="12" rx="6" ry="6" transform="translate(-97.71 131.15) rotate(-18.63)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="265.5" y="378.5" width="45" height="12" rx="6" ry="6" transform="translate(-107.72 112.12) rotate(-18.63)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/9/7">
+      <circle cx="410.5" cy="352.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="422.5" y="395.5" width="45" height="12" rx="6" ry="6" transform="translate(370.62 996.22) rotate(-124.93)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/9/8">
+      <circle cx="478.5" cy="449.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      </g></g>
+      </svg>
+  </div>
+
+  <div class="planet" *ngIf="planetName == 'Saturn'">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="saturn" viewBox="0 0 780 657"><defs><linearGradient id="linear-gradient" x1="96" y1="367.83" x2="364.94" y2="367.83" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a171b" stop-opacity="0.5"/><stop offset="0.46" stop-color="#1a171b" stop-opacity="0.14"/><stop offset="1" stop-color="#1a171b" stop-opacity="0"/></linearGradient></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+      
+      <a xlink:href="start-game/6/1">
+      <circle cx="384.36" cy="368.64" r="288.36" style="fill:#e55f51"/>
+      </a>
+      <path d="M234.84,367.83c0,196,130.09,281,130.09,281C216.41,648.85,96,523,96,367.83s120.41-281,268.94-281C364.94,86.8,234.84,178.95,234.84,367.83Z" style="fill:url(#linear-gradient)"/><line x1="292.1" x2="292.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="468.06 74.97 291.99 74.97 291.99 13 468.06 13 447.41 43.56 468.06 74.97" style="fill:#f6f6f6"/><text transform="translate(317.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">S<tspan x="16.32" y="0" style="letter-spacing:-0.05998883928571429em">A</tspan><tspan x="34.13" y="0">TURN</tspan></text>
+      
+      <a xlink:href="start-game/6/2">
+      <circle cx="292.5" cy="147.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      
+      <a xlink:href="start-game/6/3">
+      <circle cx="468.5" cy="415.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="318.5" y="174.5" width="45" height="12" rx="6" ry="6" transform="translate(519.62 522.49) rotate(-145.47)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/6/4">
+      <circle cx="391.5" cy="214.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="329.5" y="257.5" width="45" height="12" rx="6" ry="6" transform="translate(-58.25 421.7) rotate(-57.91)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/6/5">
+      <circle cx="317.5" cy="309.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="268.5" y="361.5" width="45" height="12" rx="6" ry="6" transform="translate(-137.66 557.2) rotate(-75.5)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/6/6">
+      <circle cx="285.5" cy="441.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="318.5" y="400.5" width="45" height="12" rx="6" ry="6" transform="translate(-184.56 479.4) rotate(-57.91)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="350.5" y="351.5" width="45" height="12" rx="6" ry="6" transform="translate(-128.05 483.55) rotate(-57.91)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="383.5" y="303.5" width="45" height="12" rx="6" ry="6" transform="translate(-102.26 357.43) rotate(-42.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/6/7">
+      <circle cx="458.5" cy="301.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="453.5" y="349.5" width="45" height="12" rx="6" ry="6" transform="matrix(0.13, -0.99, 0.99, 0.13, 62.97, 782.54)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="435.5" y="465.5" width="45" height="12" rx="6" ry="6" transform="translate(66.26 999.34) rotate(-99.25)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="470.5" y="484.5" width="45" height="12" rx="6" ry="6" transform="translate(-165.37 266.48) rotate(-26.06)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="515.5" y="456.5" width="45" height="12" rx="6" ry="6" transform="translate(-171.03 487.52) rotate(-42.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/6/8">
+      <circle cx="582.5" cy="421.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <ellipse cx="492.83" cy="173.83" rx="76.83" ry="11.83" style="fill:#e0aa4b"/><ellipse cx="341.33" cy="558" rx="94.33" ry="11.67" style="fill:#e0aa4b"/><ellipse cx="210" cy="256.83" rx="56" ry="15.83" style="fill:#e0aa4b"/><ellipse cx="579.5" cy="286.83" rx="22.5" ry="5.83" style="fill:#e0aa4b"/><g style="opacity:0.2"><path d="M672.12,357.85c.12,3.34.26,6.68.26,10.05,0,3.59-.14,7.15-.28,10.71,30.83,26.7,45.82,49.4,39.15,63.92-5.46,11.88-24.78,16.82-54,15.65-62.23-2.5-169.6-32.78-285.55-83.55-107.42-47-196.48-100.42-243.42-142.78C100.7,207,87.63,185.93,93.95,172.19c7.54-16.39,41.37-19.61,91.44-11.7q7.37-6.68,15.21-12.85c-104.51-22.24-181-17.9-197.31,17.63C-11.76,198,25.69,253.86,98,313.08c59,48.29,141.22,98.81,237.17,140.83,102.57,44.92,202.14,71.94,281,81.34,85.36,10.17,146.41-.33,160.61-31.21C792.31,470.32,750.35,415.8,672.12,357.85Z" style="fill:#d6cfc4"/></g>
+      </g></g>
+      </svg>
+    </div>
+
+  <div class="planet" *ngIf="planetName == 'Uranus'">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="uranus" viewBox="0 0 576.71 657"><defs><linearGradient id="linear-gradient" y1="367.83" x2="268.94" y2="367.83" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a171b" stop-opacity="0.5"/><stop offset="0.46" stop-color="#1a171b" stop-opacity="0.14"/><stop offset="1" stop-color="#1a171b" stop-opacity="0"/></linearGradient></defs><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+      
+      <a xlink:href="start-game/7/1">
+      <circle cx="288.36" cy="368.64" r="288.36" style="fill:#91c2ad"/>
+      </a>
+      <g style="opacity:0.61"><path d="M138.84,367.83c0,196,130.09,281,130.09,281C120.41,648.85,0,523,0,367.83s120.41-281,268.94-281C268.94,86.8,138.84,178.95,138.84,367.83Z" style="fill:url(#linear-gradient)"/></g><line x1="196.1" x2="196.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="372.06 74.97 195.99 74.97 195.99 13 372.06 13 351.41 43.56 372.06 74.97" style="fill:#f6f6f6"/><text transform="translate(214.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">URANUS</text>
+      
+      <a xlink:href="start-game/7/2">
+      <circle cx="196.5" cy="147.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="129.5" y="184.5" width="45" height="12" rx="6" ry="6" transform="translate(-88.9 153.6) rotate(-42.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/7/3">
+      <circle cx="405.5" cy="561.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <path d="M521.69,206.91c-51.93,9.22-124.73-2-156.46-7.91A126.29,126.29,0,0,0,344,219c47.31,21.09,132.85,53.62,216.89,57.16A127.27,127.27,0,0,0,521.69,206.91Z" style="fill:#0cbcb7"/><path d="M151.06,416c-.38,2.23-12.06-4-12.06,2.3,0,4.37,11.41,18.68,12.18,22.93,126.08-1.25,233,28.23,14.36,33.16,4.87,6.93,8.58,15.39,15.46,21.61l375.36-25.31c7.32-11.49,11.75-23.8,12.78-36.62C458.2,442.41,268.1,427.31,151.06,416Z" style="fill:#0cbcb7"/><rect x="87.5" y="225.5" width="45" height="12" rx="6" ry="6" transform="translate(-127.84 135.99) rotate(-42.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/7/4">
+      <circle cx="74.5" cy="276.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="112.5" y="273.5" width="45" height="12" rx="6" ry="6" transform="translate(-29.08 16.02) rotate(-6.13)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/7/5">
+      <circle cx="196.5" cy="276.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="231.5" y="265.5" width="45" height="12" rx="6" ry="6" transform="translate(-27.55 28.68) rotate(-6.13)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="287.5" y="269.5" width="45" height="12" rx="6" ry="6" transform="translate(63.92 -58.34) rotate(11.98)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/7/6">
+      <circle cx="363.5" cy="297.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="287.5" y="322.5" width="45" height="12" rx="6" ry="6" transform="translate(-92.64 123.83) rotate(-19.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="229.5" y="336.5" width="45" height="12" rx="6" ry="6" transform="translate(-52.57 45.78) rotate(-9.4)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="172.5" y="345.5" width="45" height="12" rx="6" ry="6" transform="translate(-36.43 22.84) rotate(-6.13)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/7/7">
+      <circle cx="134.5" cy="361.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="85.5" y="403.5" width="45" height="12" rx="6" ry="6" transform="translate(-315.24 394.68) rotate(-73.22)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="85.5" y="458.5" width="45" height="12" rx="6" ry="6" transform="translate(-316.09 682.6) rotate(-104.13)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="108.5" y="511.5" width="45" height="12" rx="6" ry="6" transform="translate(-223.75 916.4) rotate(-124.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="151.5" y="546.5" width="45" height="12" rx="6" ry="6" transform="translate(229.55 1129.08) rotate(-168.02)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/7/8">
+      <circle cx="233.5" cy="565.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="267.5" y="547.5" width="45" height="12" rx="6" ry="6" transform="translate(-169.72 130.27) rotate(-19.71)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="321.5" y="542.5" width="45" height="12" rx="6" ry="6" transform="translate(121.32 -59.45) rotate(11.98)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      </g></g>
+      </svg>
+  </div>
+
+  <div class="planet" *ngIf="planetName == 'Venus'">
+    <svg id="venus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 578.13 657"><title>Asset 3</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,368.64C0,209.39,129.1,80.29,288.36,80.29s288.36,129.1,288.36,288.36S447.61,657,288.36,657" style="fill:#cbba97"/><path d="M288.36,656C129.1,656,0,526.9,0,367.64" style="fill:#cbba97"/><line x1="196.1" x2="196.1" y2="119.64" style="fill:none;stroke:#c6c7c8;stroke-miterlimit:10;stroke-width:2px"/><polygon points="372.06 74.97 195.99 74.97 195.99 13 372.06 13 351.41 43.56 372.06 74.97" style="fill:#f6f6f6"/><text transform="translate(225.75 54.53)" style="font-size:28px;font-family:JosefinSans-Bold, Josefin Sans;font-weight:700">VENUS</text>
+      
+      <a xlink:href="start-game/2/1">
+      <circle cx="196.5" cy="126.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="233.5" y="126.5" width="45" height="12" rx="6" ry="6" transform="translate(512 265) rotate(-180)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/2/2">
+      <circle cx="374.5" cy="149.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="374.5" y="193.5" width="45" height="12" rx="6" ry="6" transform="translate(385.28 643.65) rotate(-115.17)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/2/3">
+      <circle cx="423.5" cy="250.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="354.5" y="285.5" width="45" height="12" rx="6" ry="6" transform="translate(849.24 355.45) rotate(150)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="302.5" y="306.5" width="45" height="12" rx="6" ry="6" transform="translate(707.23 551.63) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="245.5" y="318.5" width="45" height="12" rx="6" ry="6" transform="translate(596.91 587.07) rotate(168.15)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/2/4">
+      <circle cx="141.5" cy="370.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="182.5" y="337.5" width="45" height="12" rx="6" ry="6" transform="translate(528.44 578.88) rotate(156.87)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="164.5" y="405.5" width="45" height="12" rx="6" ry="6" transform="translate(123.64 859.03) rotate(-147.5)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/2/5">
+      <circle cx="248.5" cy="454.5" r="26" style="fill:#fff;stroke:#0fbab6;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <rect x="281.5" y="479.5" width="45" height="12" rx="6" ry="6" transform="translate(356.07 1055.95) rotate(-153.16)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="343.5" y="501.5" width="45" height="12" rx="6" ry="6" transform="translate(693.15 1040.87) rotate(-175.72)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/><rect x="295.5" y="130.5" width="45" height="12" rx="6" ry="6" transform="matrix(-0.99, -0.16, 0.16, -0.99, 609.28, 323.34)" style="fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:0.75px"/>
+      
+      <a xlink:href="start-game/2/6">
+      <circle cx="437.5" cy="512.5" r="26" style="fill:#fff;stroke:#9e0b19;stroke-miterlimit:10;stroke-width:7px"/>
+      </a>
+      <path d="M578,376c-1.28-4.1.62-11.32,0-19-.7-8.6-3.31-13.49-3-17.95.63-8,.19-19.71-5-35.05-16.73,15.38-100.52,73.34-309.47,62.69a199,199,0,0,0-14.21,20.22c24,1,80.21,4.87,133.45,18.67C432.32,419.2,531.53,391,578,376Z" style="fill:#b89876"/><path d="M167.32,469.39q-.17,5.4-.41,10.72c-13.73-5.69-80.12-28.85-128.64,32.32C43,514.37,16.76,487.17,13,455,28.26,449.62,114.71,428.64,167.32,469.39Z" style="fill:#c4966e"/><ellipse cx="117" cy="237" rx="27" ry="13" style="fill:#b89876"/><ellipse cx="220.86" cy="563.98" rx="23.04" ry="32.24" transform="translate(-218.89 147.48) rotate(-25.17)" style="fill:#b89876"/>
+      </g></g>
+      </svg>
+  </div>
+
 </div>
