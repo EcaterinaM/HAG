@@ -2,6 +2,8 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Levels } from '../../models/levels.model';
 import { Constants } from '../../../shared/constants/string.constants';
+import { GetLevelQuestionModel } from '../../../shared/models/getLevelQuestion.model';
+import { LevelQuestionsResponse } from '../../../shared/models/levelQuestionsResponse.model';
 
 @Component({
   selector: 'app-room-levels',
@@ -14,10 +16,9 @@ export class RoomLevelsComponent implements OnInit{
   private levels: Array<Levels> = [];  
   public click:boolean = false;
   public planetName:string;
-
   constructor(private router:Router){}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.click = false;
     this.levels = new Array<Levels>();
     this.levels.push(new Levels("Mercury",false));

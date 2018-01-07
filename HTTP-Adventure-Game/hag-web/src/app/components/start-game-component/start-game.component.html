@@ -1,23 +1,24 @@
 <div class="container-start-game">
     <div class="container-question">
-        {{setQuestionForPlanet(2)}}
+        {{Question?.QuestionText}}
     </div>
     <div class="container-button-answer">
         <table>
             <tr>
                 <th>
-                    <app-button-answer class="button-answer1" (click)="getAnswer(1)" [content]="setContentForAnswer(1)"></app-button-answer>        
+                    <!-- aici la click sa facem o metoda generala care sa verifice daca e corect rasp sau nu -->
+                    <app-button-answer class="button-answer1" (click)="getAnswer(1)" [content]='answer1'></app-button-answer>        
                 </th>
                 <th>
-                    <app-button-answer class="button-answer2" (click)="getAnswer(2)" [content]="setContentForAnswer(2)"></app-button-answer>        
+                    <app-button-answer class="button-answer2" (click)="getAnswer(2)" [content]='answer2'></app-button-answer>        
                 </th>
             </tr>
             <tr>
                 <td>
-                    <app-button-answer class="button-answer3" (click)="getAnswer(3)" [content]="setContentForAnswer(3)"></app-button-answer>        
+                    <app-button-answer class="button-answer3" (click)="getAnswer(3)" [content]='answer3'></app-button-answer>        
                 </td>
                 <td>
-                    <app-button-answer class="button-answer4" (click)="getAnswer(4)" [content]="setContentForAnswer(4)"></app-button-answer>         
+                    <app-button-answer class="button-answer4" (click)="getAnswer(4)" [content]='answer4'></app-button-answer>         
                 </td>
             </tr>
         </table>

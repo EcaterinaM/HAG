@@ -12,6 +12,9 @@ import { RoomLevelsComponent } from './components/room-levels-component/room-lev
 import { StartGameComponent } from './components/start-game-component/start-game.component';
 import { BackComponent } from '../shared/components/back-component/back.component';
 import { ButtonAnswerComponent } from '../shared/components/button-answer-component/button-answer.component';
+import { HttpModule, Http, RequestOptions } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { QuestionsServices } from '../shared/services/questions.services';
 
 @NgModule({
   declarations: [
@@ -22,15 +25,18 @@ import { ButtonAnswerComponent } from '../shared/components/button-answer-compon
     RoomLevelsComponent,
     StartGameComponent,
     BackComponent,
-    ButtonAnswerComponent,
+    ButtonAnswerComponent
   ],
   imports: [
+    FormsModule,
+    HttpModule,
+    HttpClientModule,
     BrowserModule,
     RatingModule,
     FormsModule,
     routing
   ],
-  providers: [],
+  providers: [QuestionsServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
