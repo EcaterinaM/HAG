@@ -1,0 +1,11 @@
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\bin\Debug\netcoreapp2.0\HagBusinessLayer.deps.json
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\bin\Debug\netcoreapp2.0\HagBusinessLayer.dll
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\bin\Debug\netcoreapp2.0\HagBusinessLayer.pdb
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\bin\Debug\netcoreapp2.0\HagDataLayer.dll
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\bin\Debug\netcoreapp2.0\HagDataLayer.pdb
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\obj\Debug\netcoreapp2.0\HagBusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\obj\Debug\netcoreapp2.0\HagBusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\obj\Debug\netcoreapp2.0\HagBusinessLayer.AssemblyInfoInputs.cache
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\obj\Debug\netcoreapp2.0\HagBusinessLayer.AssemblyInfo.cs
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\obj\Debug\netcoreapp2.0\HagBusinessLayer.dll
+C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagBusinessLayer\obj\Debug\netcoreapp2.0\HagBusinessLayer.pdb
