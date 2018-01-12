@@ -1,9 +1,0 @@
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\bin\Debug\netcoreapp2.0\HagDataLayer.deps.json
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\bin\Debug\netcoreapp2.0\HagDataLayer.dll
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\bin\Debug\netcoreapp2.0\HagDataLayer.pdb
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\obj\Debug\netcoreapp2.0\HagDataLayer.csproj.CoreCompileInputs.cache
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\obj\Debug\netcoreapp2.0\HagDataLayer.AssemblyInfoInputs.cache
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\obj\Debug\netcoreapp2.0\HagDataLayer.AssemblyInfo.cs
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\obj\Debug\netcoreapp2.0\HagDataLayer.dll
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\obj\Debug\netcoreapp2.0\HagDataLayer.pdb
-C:\Users\ecate\Desktop\Hag.Api\HagSolution\HagDataLayer\obj\Debug\netcoreapp2.0\HagDataLayer.csprojResolveAssemblyReference.cache
