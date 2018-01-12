@@ -23,13 +23,15 @@
         color: white;
         display: flex;
         align-items: center; 
-        margin-bottom: 160px;    
+        margin-bottom: 160px;   
+        z-index: 0; 
     }
 
     .container-button-answer{
         bottom: 0;
         position: absolute;
         justify-content: center;
+        z-index: 2; 
         
         .button-answer2, .button-answer4{
             float: right;
@@ -42,6 +44,55 @@
             margin-bottom: 107px;  
             margin-left: 13px;          
         }
+    }
+
+    .verify-answer-container{
+        width: 890px;
+        height: 330px;
+        margin: 100px 50px;
+        position: absolute;
+        z-index: 200; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .check-answer{
+            font-size: 140px;
+            opacity: 1;     
+        }
+
+        .correct{
+            color: rgb(72, 95, 72);
+        }
+
+        .incorrect{
+            color: rgb(184, 42, 42);
+        }
+
+        .next-button{
+            color: rgb(100, 100, 100);
+            font-size: 50px; 
+            display: inline-block;
+            margin-left: 30px; 
+
+            .next-level{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .opac-verify-answer{
+        width: 890px;
+        height: 330px;
+        margin: 100px 50px;
+        position: absolute;
+        background-color: rgb(177, 177, 177);
+        z-index: 100; 
+        opacity: 0.95;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
 }
 
