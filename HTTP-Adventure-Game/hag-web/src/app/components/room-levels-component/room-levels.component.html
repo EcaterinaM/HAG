@@ -21,16 +21,18 @@
         </ul>
 
         <div *ngIf="click" class="bigPlanet">
-          <app-level [isLocked]="isLocked" 
-                     [planetName]="planetName"
-                     [click]="click">
-          </app-level>
+          <div class="app-level">
+            <app-level [isLocked]="isLocked" 
+                       [planetName]="planetName"
+                       [click]="click">
+            </app-level>
+          </div>
+          
           <div *ngIf="click" class='container-back' (click)="seeAllPlanets()">
               <div class="route"><BACK</div>
             </div>
-            
+          </div>
         </div>
-    </div>
   </div>
 </div>
 

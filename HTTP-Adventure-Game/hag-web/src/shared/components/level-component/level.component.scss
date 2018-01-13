@@ -22,6 +22,12 @@
 .planets{
     width: 300px;
     height: 320px;
+
+    .planet {
+        circle {
+            cursor: pointer;
+        }
+    }
 }
 
 .planetHover {
