@@ -35,8 +35,6 @@ export class LevelComponent {
     }
   }
 
-  //nu e folosita momentan daca nu o folosim o sa o stergem
-  // aici luam lista cu toate intrebarile pt lumea si bulina aleasa
   getListQuestions(planetName:string,numberLevel: number):void{
     this.getLevelQuestionModel = new GetLevelQuestionModel(planetName,numberLevel);
     this.QuestionsList = new Array<LevelQuestionsResponse>();
@@ -45,23 +43,17 @@ export class LevelComponent {
     .subscribe(
       (res : Array<LevelQuestionsResponse> ) => {
         this.QuestionsList = res;
-        // de aici sa facem rutarea catre camera cu intrebari (?)
       });
   }
 
-
   // aici luam random question pt lumea si bulina aleasa
   getRandomQ(planetName:string,planetNumber:number,numberLevel: number):void{
-    console.log('Suntem in Level')
     this.getLevelQuestionModel = new GetLevelQuestionModel(planetName,numberLevel);
     this.service.getRandomQuestion(this.getLevelQuestionModel)
     .subscribe(
       (res) => {
-        console.log('subscribe');
-        this.Question = new LevelQuestionsResponse(res);
-          console.log('luam Id ul intrebarii si il rutam la start-game sa apara intrebarea');
+          this.Question = new LevelQuestionsResponse(res);
           this.router.navigate(['/start-game',planetNumber,numberLevel, this.Question.QuestionId]);
-          // de aici sa facem rutarea catre camera cu intrebari 
       });
   }
 

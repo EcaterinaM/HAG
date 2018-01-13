@@ -23,6 +23,28 @@
             </tr>
         </table>
     </div>
+
+    <div *ngIf="answerUser" class="verify-answer-container">
+        <div *ngIf="checkAnswerUser" class="check-answer correct">
+            <i class="fa fa-check" aria-hidden="true"></i> Correct 
+            <div (click)="goToNextQuestion()" class="next-button">
+                <i  class="fa fa-arrow-right" aria-hidden="true"></i> 
+                <div class="next-level" >
+                    Next question
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!checkAnswerUser" class="check-answer incorrect">
+            <i class="fa fa-times" aria-hidden="true"></i> Incorrect
+            <div (click)="goToNextQuestion()" class="next-button">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i> 
+                <div class="next-level" >
+                    Next question
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="answerUser" class="opac-verify-answer"></div>
 </div>
 
 <app-back class="back-path"
