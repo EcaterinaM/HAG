@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button-answer',
@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./button-answer.component.scss']
 })
 export class ButtonAnswerComponent {
-  @Input() content : string;
+  @Input() content: string;
 }

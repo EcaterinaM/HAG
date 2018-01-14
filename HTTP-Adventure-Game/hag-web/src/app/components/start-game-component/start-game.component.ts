@@ -42,11 +42,12 @@ export class StartGameComponent implements OnInit {
       this.idLevel = params['idLevel'];
     });
     this.answerUser = false;
-    this.getAnswers();
+    this.getAnswers(this.questionId);
   }
 
-  private getAnswers(): void {
-     this.service.getQuestionById(this.questionId)
+  private getAnswers(id :string): void {
+    console.log('LEVEL')
+     this.service.getQuestionById(id)
      .subscribe(
        (res) => {
          this.Question = new LevelQuestionsResponse(res);
@@ -80,23 +81,20 @@ export class StartGameComponent implements OnInit {
     }
   }
 
-
-  //* de vazut cum facem cu verificarea daca a raspuns la 4 intrebari corecte sa deblocam next*/
   private goToNextQuestion(): void {
     this.answerUser = false;
     this.idLevel = Number(this.idLevel) + 1;
     this.planetName = this.service.getPlanetName(Number(this.idPlanet));
     this.numberOfLevelForPlanet= this.service.getNumberOfLevels(Number(this.idPlanet));
-    
-    if(this.numberOfLevelForPlanet == this.idLevel){
+    if(this.idLevel > this.numberOfLevelForPlanet){
       this.router.navigate(['/room-levels']);
     }else{
       this.getLevelQuestionModel = new GetLevelQuestionModel(this.planetName, this.idLevel);
       this.service.getRandomQuestion(this.getLevelQuestionModel)
       .subscribe(
         (res) => {
-          this.getAnswers();
           this.Question = new LevelQuestionsResponse(res);
+          this.getAnswers(this.Question.QuestionId);
           this.router.navigate(['/start-game', this.idPlanet , this.idLevel, this.Question.QuestionId]);
         });
     }
