@@ -19,15 +19,30 @@ export class LevelComponent implements OnInit {
 
   planet: string;
   mercury = ['white', 'white', 'white', 'white', 'white', 'white'];
-
+  venus = ['white', 'white', 'white', 'white', 'white', 'white'];
+  earth = ['white', 'white', 'white', 'white', 'white', 'white'];
+  mars = ['white', 'white', 'white', 'white', 'white', 'white'];
+  jupiter = ['white', 'white', 'white', 'white', 'white', 'white'];
+  saturn = ['white', 'white', 'white', 'white', 'white', 'white','white'];
+  uranus = ['white', 'white', 'white', 'white', 'white', 'white', 'white'];
+  neptun = ['white', 'white', 'white', 'white', 'white', 'white', 'white'];
+  pluto = ['white', 'white', 'white', 'white', 'white', 'white','white'];
+  
   getLevelQuestionModel: GetLevelQuestionModel;
   QuestionsList:  Array<LevelQuestionsResponse>;
   Question: LevelQuestionsResponse;
 
   ngOnInit() {
-    this.setColours();
+    console.log('ng',this.planetName);
+    // this.setColoursAllPlanets();
+    this.setColours('Mercury', this.mercury);
+    this.setColours('Venus', this.venus);
+    this.setColours('Earth', this.earth);
+    this.setColours('Mars', this.mars);
   }
-  constructor(private router: Router, private service: QuestionsServices, private answerService: AnswersServices){}
+  constructor(private router: Router, private service: QuestionsServices, private answerService: AnswersServices){
+      console.log('cnst',this.planetName);
+  }
 
   private addFilter(): any {
     if (this.isLocked) {
@@ -35,14 +50,26 @@ export class LevelComponent implements OnInit {
     }
   }
 
-  private setColours() {
-    const mercuryBinar = this.answerService.getPlanetAnswers('Mercury');
+  public setColoursAllPlanets() {
+    this.setColours('Mercury', this.mercury);
+    this.setColours('Venus', this.venus);
+    this.setColours('Earth', this.earth);
+    this.setColours('Mars', this.mars);
+    this.setColours('Jupiter', this.jupiter);
+    this.setColours('Saturn', this.saturn);
+    this.setColours('Uranus', this.uranus);
+    this.setColours('Neptune', this.neptun);
+    this.setColours('Pluto', this.pluto);
+  }
+
+  private setColours(planetName: string, planetVector: Array<any>) {
+    const mercuryBinar = this.answerService.getPlanetAnswers(planetName);
     for (let i = 0; i < mercuryBinar.length; i ++) {
       if (mercuryBinar[i] === -1) {
-        this.mercury[i] = 'red';
+        planetVector[i] = 'red';
       }
       if (mercuryBinar[i] === 1) {
-        this.mercury[i] = 'green';
+        planetVector[i] = 'green';
       }
     }
   }

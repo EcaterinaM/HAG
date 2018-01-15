@@ -78,10 +78,10 @@ export class StartGameComponent implements OnInit {
     this.answerUser = true;
     if (numberOfAnswer === this.correctAnswerNumber) {
       this.checkAnswerUser = true;
-      this.answersService.setAnswer('Mercury', this.idLevel - 1, true);
+      this.answersService.setAnswer(this.planetName, this.idLevel - 1, true);
     } else {
       this.checkAnswerUser = false;
-      this.answersService.setAnswer('Mercury', this.idLevel - 1, false);
+      this.answersService.setAnswer(this.planetName, this.idLevel - 1, false);
     }
   }
 
@@ -91,8 +91,7 @@ export class StartGameComponent implements OnInit {
     this.planetName = this.questionService.getPlanetName(Number(this.idPlanet));
     this.numberOfLevelForPlanet = this.questionService.getNumberOfLevels(Number(this.idPlanet));
     if (this.idLevel > this.numberOfLevelForPlanet) {
-      this.answersService.unblockNextPlanet('Mercury');
-      console.log(this.answersService.unblockNextPlanet('Mercury'));
+      this.answersService.unblockNextPlanet(this.planetName);
       this.router.navigate(['/room-levels']);
     }else {
       this.getLevelQuestionModel = new GetLevelQuestionModel(this.planetName, this.idLevel);
