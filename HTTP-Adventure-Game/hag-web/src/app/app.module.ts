@@ -15,6 +15,8 @@ import { ButtonAnswerComponent } from '../shared/components/button-answer-compon
 import { HttpModule, Http, RequestOptions } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { QuestionsServices } from '../shared/services/questions.services';
+import { AnswersServices } from '../shared/services/answers.service';
+import { PlanetServices } from '../shared/services/planet.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { QuestionsServices } from '../shared/services/questions.services';
     FormsModule,
     routing
   ],
-  providers: [QuestionsServices],
+  providers: [QuestionsServices, AnswersServices, PlanetServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

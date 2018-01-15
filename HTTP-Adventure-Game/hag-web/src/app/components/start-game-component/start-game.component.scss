@@ -1,8 +1,8 @@
 @import '../../../shared/variables.scss';
 
 .container-start-game{
-    width: 1000px;
-    height: 500px;
+    width: 1100px;
+    height: 600px;
     position: absolute;
     top: 10%;
     background:rgba(128, 128, 128, 0.5); 
@@ -23,8 +23,11 @@
         color: white;
         display: flex;
         align-items: center; 
-        margin-bottom: 160px;   
+        margin-bottom: 340px;   
         z-index: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .container-button-answer{
@@ -35,21 +38,21 @@
         
         .button-answer2, .button-answer4{
             float: right;
-            margin-bottom: 107px;
-            margin-left: 487px;
+            margin-bottom: 165px;
+            margin-left: 552px;
         }
 
         .button-answer1, .button-answer3{
             float: left;
-            margin-bottom: 107px;  
-            margin-left: 13px;          
+            margin-bottom: 165px;  
+            margin-left: 0px;          
         }
     }
 
     .verify-answer-container{
         width: 890px;
         height: 330px;
-        margin: 100px 50px;
+        margin: 122px 100px;
         position: absolute;
         z-index: 200; 
         display: flex;
@@ -82,17 +85,30 @@
     }
 
     .opac-verify-answer{
-        width: 890px;
-        height: 330px;
-        margin: 100px 50px;
+        width: 945px;
+        height: 347px;
+        margin: 128px 77px;
         position: absolute;
-        background-color: rgb(177, 177, 177);
+        background-color: rgb(224, 224, 224);
         z-index: 100; 
-        opacity: 0.95;   
+        opacity: 0.9;   
         display: flex;
         align-items: center;
         justify-content: center;
         
+    }
+    .opac-all-verify-answer{
+        width: 1100px;
+        height: 600px;
+        padding: 0 50px 0 50px;
+        margin-left: -50px;
+        position: absolute;
+        background-color: black;
+        z-index: 90; 
+        opacity: 0.5;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -105,4 +121,10 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container-start-game{
+        top: 70%;
+    }
 }

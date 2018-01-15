@@ -4,6 +4,7 @@ import { Constants } from '../../../shared/constants/string.constants';
 import { LevelQuestionsResponse } from '../../../shared/models/levelQuestionsResponse.model';
 import { QuestionsServices } from '../../../shared/services/questions.services';
 import { GetLevelQuestionModel } from '../../../shared/models/getLevelQuestion.model';
+import { AnswersServices } from '../../../shared/services/answers.service';
 
 @Component({
   selector: 'app-start-game',
@@ -31,9 +32,10 @@ export class StartGameComponent implements OnInit {
   private planetName: string;
   private numberOfLevelForPlanet: number;
 
-  constructor(private route: ActivatedRoute, 
-    private router: Router, 
-    private service: QuestionsServices) {}
+  constructor(private route: ActivatedRoute,
+    private router: Router,
+    private questionService: QuestionsServices,
+    private answersService: AnswersServices) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -43,11 +45,11 @@ export class StartGameComponent implements OnInit {
     });
     this.answerUser = false;
     this.getAnswers(this.questionId);
+
   }
 
-  private getAnswers(id :string): void {
-    console.log('LEVEL')
-     this.service.getQuestionById(id)
+  private getAnswers(id: string): void {
+     this.questionService.getQuestionById(id)
      .subscribe(
        (res) => {
          this.Question = new LevelQuestionsResponse(res);
@@ -68,7 +70,7 @@ export class StartGameComponent implements OnInit {
        });
   }
 
-  private randomInt(min, max) : number {
+  private randomInt(min, max): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
@@ -76,21 +78,25 @@ export class StartGameComponent implements OnInit {
     this.answerUser = true;
     if (numberOfAnswer === this.correctAnswerNumber) {
       this.checkAnswerUser = true;
+      this.answersService.setAnswer('Mercury', this.idLevel - 1, true);
     } else {
       this.checkAnswerUser = false;
+      this.answersService.setAnswer('Mercury', this.idLevel - 1, false);
     }
   }
 
   private goToNextQuestion(): void {
     this.answerUser = false;
     this.idLevel = Number(this.idLevel) + 1;
-    this.planetName = this.service.getPlanetName(Number(this.idPlanet));
-    this.numberOfLevelForPlanet= this.service.getNumberOfLevels(Number(this.idPlanet));
-    if(this.idLevel > this.numberOfLevelForPlanet){
+    this.planetName = this.questionService.getPlanetName(Number(this.idPlanet));
+    this.numberOfLevelForPlanet = this.questionService.getNumberOfLevels(Number(this.idPlanet));
+    if (this.idLevel > this.numberOfLevelForPlanet) {
+      this.answersService.unblockNextPlanet('Mercury');
+      console.log(this.answersService.unblockNextPlanet('Mercury'));
       this.router.navigate(['/room-levels']);
-    }else{
+    }else {
       this.getLevelQuestionModel = new GetLevelQuestionModel(this.planetName, this.idLevel);
-      this.service.getRandomQuestion(this.getLevelQuestionModel)
+      this.questionService.getRandomQuestion(this.getLevelQuestionModel)
       .subscribe(
         (res) => {
           this.Question = new LevelQuestionsResponse(res);
