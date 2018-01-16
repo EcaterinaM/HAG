@@ -24,15 +24,15 @@ export class RoomLevelsComponent implements OnInit {
     const planets = this.planetsService.getPlanetsUnlocked();
     this.click = false;
     this.levels = new Array<Levels>();
-    this.levels.push(new Levels("Mercury", false));
-    this.levels.push(new Levels("Venus", false));
-    this.levels.push(new Levels("Earth", false));
-    this.levels.push(new Levels("Mars", false));
-    this.levels.push(new Levels("Jupiter", false));
-    this.levels.push(new Levels("Saturn", false));
-    this.levels.push(new Levels("Uranus", false));
-    this.levels.push(new Levels("Neptune", false));
-    this.levels.push(new Levels("Pluto", false));
+    this.levels.push(new Levels("Mercury", planets[0]));
+    this.levels.push(new Levels("Venus", planets[1]));
+    this.levels.push(new Levels("Earth", planets[2]));
+    this.levels.push(new Levels("Mars", planets[3]));
+    this.levels.push(new Levels("Jupiter", planets[4]));
+    this.levels.push(new Levels("Saturn", planets[5]));
+    this.levels.push(new Levels("Uranus", planets[6]));
+    this.levels.push(new Levels("Neptun", planets[7]));
+    this.levels.push(new Levels("Pluto", planets[8]));
   }
 
   public goPlanetPage(planet): void {

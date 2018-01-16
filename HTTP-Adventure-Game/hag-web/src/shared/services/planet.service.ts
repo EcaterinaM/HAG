@@ -15,7 +15,6 @@ export class PlanetServices {
         if (planetName === 'Uranus') { this.index = 6; }
         if (planetName === 'Neptune') { this.index = 7; }
         if (planetName === 'Pluto') { this.index = 8; }
-        
         this.planets[this.index + 1] = 0;
     }
 

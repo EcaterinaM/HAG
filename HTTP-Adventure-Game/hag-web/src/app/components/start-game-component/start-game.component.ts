@@ -75,10 +75,14 @@ export class StartGameComponent implements OnInit {
   }
 
   private getAnswer(numberOfAnswer: number): void {
+    this.planetName = this.questionService.getPlanetName(Number(this.idPlanet));
     this.answerUser = true;
+
     if (numberOfAnswer === this.correctAnswerNumber) {
       this.checkAnswerUser = true;
       this.answersService.setAnswer(this.planetName, this.idLevel - 1, true);
+      console.log('aa');
+      this.answersService.unblockNextPlanet(this.planetName);
     } else {
       this.checkAnswerUser = false;
       this.answersService.setAnswer(this.planetName, this.idLevel - 1, false);
@@ -90,6 +94,7 @@ export class StartGameComponent implements OnInit {
     this.idLevel = Number(this.idLevel) + 1;
     this.planetName = this.questionService.getPlanetName(Number(this.idPlanet));
     this.numberOfLevelForPlanet = this.questionService.getNumberOfLevels(Number(this.idPlanet));
+
     if (this.idLevel > this.numberOfLevelForPlanet) {
       this.answersService.unblockNextPlanet(this.planetName);
       this.router.navigate(['/room-levels']);
