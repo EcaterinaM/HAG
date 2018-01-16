@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent {
+  src = 'assets/Audio/home.mp3';
+  a = new Audio(this.src);
+  constructor(private router: Router) {
+    while (true) {
+      this.a.play();
+    }
+   }
 
-  constructor(private router: Router) { }
-  
   public showLevels(): void {
     this.router.navigate(['/room-levels']);
   }
