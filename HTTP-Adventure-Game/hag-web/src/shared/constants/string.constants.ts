@@ -16,7 +16,7 @@ export class PlanetNames{
     static Pluto = 'Pluto';
 }
 
-export class LevelNumber{
+export class LevelNumber {
     static Mercury = 6;
     static Venus = 6;
     static Earth = 6;
@@ -26,6 +26,4 @@ export class LevelNumber{
     static Uranus = 7;
     static Neptune = 7;
     static Pluto = 7;
-
-
 }

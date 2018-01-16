@@ -22,7 +22,6 @@ export class RoomLevelsComponent implements OnInit {
 
   ngOnInit() {
     const planets = this.planetsService.getPlanetsUnlocked();
-    console.log(planets);
     this.click = false;
     this.levels = new Array<Levels>();
     this.levels.push(new Levels("Mercury", planets[0]));

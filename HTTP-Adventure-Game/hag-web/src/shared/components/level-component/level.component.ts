@@ -19,15 +19,23 @@ export class LevelComponent implements OnInit {
 
   planet: string;
   mercury = ['white', 'white', 'white', 'white', 'white', 'white'];
+  venus = ['white', 'white', 'white', 'white', 'white', 'white'];
+  earth = ['white', 'white', 'white', 'white', 'white', 'white'];
+  mars = ['white', 'white', 'white', 'white', 'white', 'white'];
+  jupiter = ['white', 'white', 'white', 'white', 'white', 'white'];
+  saturn = ['white', 'white', 'white', 'white', 'white', 'white', 'white'];
+  uranus = ['white', 'white', 'white', 'white', 'white', 'white', 'white'];
+  neptun = ['white', 'white', 'white', 'white', 'white', 'white', 'white'];
+  pluto = ['white', 'white', 'white', 'white', 'white', 'white', 'white'];
 
   getLevelQuestionModel: GetLevelQuestionModel;
   QuestionsList:  Array<LevelQuestionsResponse>;
   Question: LevelQuestionsResponse;
 
   ngOnInit() {
-    this.setColours();
+    this.setColoursAllPlanets();
   }
-  constructor(private router: Router, private service: QuestionsServices, private answerService: AnswersServices){}
+  constructor(private router: Router, private service: QuestionsServices, private answerService: AnswersServices) {}
 
   private addFilter(): any {
     if (this.isLocked) {
@@ -35,38 +43,58 @@ export class LevelComponent implements OnInit {
     }
   }
 
-  private setColours() {
-    const mercuryBinar = this.answerService.getPlanetAnswers('Mercury');
-    for (let i = 0; i < mercuryBinar.length; i ++) {
-      if (mercuryBinar[i] === -1) {
-        this.mercury[i] = 'red';
+  public setColoursAllPlanets() {
+    this.setColours('Mercury', this.mercury);
+    this.setColours('Venus', this.venus);
+    this.setColours('Earth', this.earth);
+    this.setColours('Mars', this.mars);
+    this.setColours('Jupiter', this.jupiter);
+    this.setColours('Saturn', this.saturn);
+    this.setColours('Uranus', this.uranus);
+    this.setColours('Neptune', this.neptun);
+    this.setColours('Pluto', this.pluto);
+  }
+
+  private setColours(planetName: string, planetVector: Array<any>) {
+    const planetBinar = this.answerService.getPlanetAnswers(planetName);
+    for (let i = 0; i < planetBinar.length; i ++) {
+      if (planetBinar[i] === -1) {
+        planetVector[i] = 'red';
       }
-      if (mercuryBinar[i] === 1) {
-        this.mercury[i] = 'green';
+      if (planetBinar[i] === 1) {
+        planetVector[i] = 'green';
       }
     }
   }
 
   getListQuestions(planetName: string, numberLevel: number): void {
-    this.getLevelQuestionModel = new GetLevelQuestionModel(planetName, numberLevel);
-    this.QuestionsList = new Array<LevelQuestionsResponse>();
+    const planetBinar = this.answerService.getPlanetAnswers(planetName);
+    console.log('getListQuestions', planetBinar[numberLevel], numberLevel);
+    if (planetBinar[numberLevel - 1] !== 1) {
+      this.getLevelQuestionModel = new GetLevelQuestionModel(planetName, numberLevel);
+      this.QuestionsList = new Array<LevelQuestionsResponse>();
 
-    this.service.getQuestions(this.getLevelQuestionModel)
-    .subscribe(
-      (res: Array<LevelQuestionsResponse> ) => {
-        this.QuestionsList = res;
-      });
+      this.service.getQuestions(this.getLevelQuestionModel)
+      .subscribe(
+        (res: Array<LevelQuestionsResponse> ) => {
+          this.QuestionsList = res;
+        });
+    }
   }
 
   // aici luam random question pt lumea si bulina aleasa
   getRandomQ(planetName: string, planetNumber: number, numberLevel: number): void {
-    this.getLevelQuestionModel = new GetLevelQuestionModel(planetName, numberLevel);
-    this.service.getRandomQuestion(this.getLevelQuestionModel)
-    .subscribe(
-      (res) => {
-          this.Question = new LevelQuestionsResponse(res);
-          this.router.navigate(['/start-game', planetNumber, numberLevel, this.Question.QuestionId]);
-      });
+    const planetBinar = this.answerService.getPlanetAnswers(planetName);
+    console.log('getRandomQ', planetBinar[numberLevel], numberLevel);
+    if (planetBinar[numberLevel - 1] !== 1) {
+       this.getLevelQuestionModel = new GetLevelQuestionModel(planetName, numberLevel);
+      this.service.getRandomQuestion(this.getLevelQuestionModel)
+      .subscribe(
+        (res) => {
+            this.Question = new LevelQuestionsResponse(res);
+            this.router.navigate(['/start-game', planetNumber, numberLevel, this.Question.QuestionId]);
+        });
+    }
   }
 
 }
