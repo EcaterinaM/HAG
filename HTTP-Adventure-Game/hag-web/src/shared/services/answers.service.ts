@@ -12,6 +12,7 @@ export class AnswersServices {
    private uranus: Array<any> = [0, 0, 0, 0, 0, 0, 0];
    private neptun: Array<any> = [0, 0, 0, 0, 0, 0, 0];
    private pluto: Array<any> = [0, 0, 0, 0, 0, 0, 0];
+   private nextLevelAudio = new Audio('assets/Audio/next-level.wav');
 
    constructor(private planetService: PlanetServices) {}
 
@@ -72,16 +73,17 @@ export class AnswersServices {
    }
 
    public unblockNextPlanet(planet: string): any {
-        const planetVector = this.getPlanetAnswers(planet);
-        let countGreenFlags = 0;
-        for (let i = 1; i <= planetVector.length; i++) {
-            if (planetVector[i] === 1) {
-                countGreenFlags++;
+       const planetVector = this.getPlanetAnswers(planet);
+       let countGreenFlags = 0;
+       for (let i = 1; i <= planetVector.length; i++) {
+           if (planetVector[i] === 1) {
+               countGreenFlags++;
             }
         }
         if (countGreenFlags >= 4) {
+            // this.nextLevelAudio.play();
             this.planetService.setPlanetUnlocked(planet);
         }
-        return false;
+        return countGreenFlags;
    }
 }

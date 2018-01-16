@@ -31,6 +31,9 @@ export class StartGameComponent implements OnInit {
   private idLevel: number;
   private planetName: string;
   private numberOfLevelForPlanet: number;
+  private negativeAudio = new Audio('assets/Audio/wrong.wav');
+  private positiveAudio = new Audio('assets/Audio/correct.wav');
+  private nextLevelAudio = new Audio('assets/Audio/next-level.wav');
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -79,11 +82,12 @@ export class StartGameComponent implements OnInit {
     this.answerUser = true;
 
     if (numberOfAnswer === this.correctAnswerNumber) {
+      this.positiveAudio.play();
       this.checkAnswerUser = true;
       this.answersService.setAnswer(this.planetName, this.idLevel - 1, true);
-      console.log('aa');
       this.answersService.unblockNextPlanet(this.planetName);
     } else {
+      this.negativeAudio.play();
       this.checkAnswerUser = false;
       this.answersService.setAnswer(this.planetName, this.idLevel - 1, false);
     }
@@ -96,7 +100,10 @@ export class StartGameComponent implements OnInit {
     this.numberOfLevelForPlanet = this.questionService.getNumberOfLevels(Number(this.idPlanet));
 
     if (this.idLevel > this.numberOfLevelForPlanet) {
-      this.answersService.unblockNextPlanet(this.planetName);
+      const correctA = this.answersService.unblockNextPlanet(this.planetName);
+      if (correctA >= 4) {
+        this.nextLevelAudio.play();
+      }
       this.router.navigate(['/room-levels']);
     }else {
       this.getLevelQuestionModel = new GetLevelQuestionModel(this.planetName, this.idLevel);

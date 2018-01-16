@@ -69,7 +69,6 @@ export class LevelComponent implements OnInit {
 
   getListQuestions(planetName: string, numberLevel: number): void {
     const planetBinar = this.answerService.getPlanetAnswers(planetName);
-    console.log('getListQuestions', planetBinar[numberLevel], numberLevel);
     if (planetBinar[numberLevel - 1] !== 1) {
       this.getLevelQuestionModel = new GetLevelQuestionModel(planetName, numberLevel);
       this.QuestionsList = new Array<LevelQuestionsResponse>();
@@ -85,7 +84,6 @@ export class LevelComponent implements OnInit {
   // aici luam random question pt lumea si bulina aleasa
   getRandomQ(planetName: string, planetNumber: number, numberLevel: number): void {
     const planetBinar = this.answerService.getPlanetAnswers(planetName);
-    console.log('getRandomQ', planetBinar[numberLevel], numberLevel);
     if (planetBinar[numberLevel - 1] !== 1) {
        this.getLevelQuestionModel = new GetLevelQuestionModel(planetName, numberLevel);
       this.service.getRandomQuestion(this.getLevelQuestionModel)
