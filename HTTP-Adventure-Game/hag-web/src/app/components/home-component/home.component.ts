@@ -11,9 +11,6 @@ export class HomeComponent {
   src = 'assets/Audio/home.mp3';
   a = new Audio(this.src);
   constructor(private router: Router) {
-    while (true) {
-      this.a.play();
-    }
    }
 
   public showLevels(): void {

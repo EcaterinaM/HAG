@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hag</title>
+    <link rel="stylesheet" href="scholarly.css">
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header>
+      <p class="title">Hag</p>
+      <p class="subtitle">HTTP Adventure Game</p>
+    </header>
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>HTTP Adventure Game</h1>
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="" typeof="schema:Person">
+              <span property="schema:givenName">Ecaterina</span>
+              <span property="schema:familyName">Manolache</span>
+            </a>
+  
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:ecaterina.manolache96@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+          <li property="schema:contributor" typeof="sa:ContributorRole">
+            <a property="schema:contributor" href="" typeof="schema:Person">
+              <span property="schema:givenName">Camelia</span>
+              <span property="schema:familyName">Macariu</span>
+            </a>
+           <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:camelia.macaraiu@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+        </ol>
+      </section>
+
+      <section typeof="sa:Abstract" id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          HTTP Adventure Game este un joc Web educativ de tip adventure al cărui scenariu se bazează pe fluxul 
+          de acţiuni privitoare la HTTP, conform diagramei protocolului. Pentru fiecare "scenă" principală, 
+          se va interacţiona cu jucătorul oferindu-i-se întrebări de tip trivia referitoare la conceptele de bază ale spaţiului WWW, 
+		  eventual recompense/penalizări etc.Aceste informaţii sunt preluate cu ajutorul unui API conectat la o baza de date.
+        </p>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="motivation">
+        <h2>Introducere</h2>
+        <aside typeof="schema:WPSideBar">
+          <p>
+            <strong>Codul sursă</strong>: al aplicației este disponibil pe Github
+            <a href="https://github.com/EcaterinaM/HAG">Hag.Web</a>
+			<a href="https://github.com/EcaterinaM/HagApi">Hag.API</a>
+          </p>
+          <p>
+            Pentru managmentul codului sursă am ales sa folosim Github si am separat in 2 repository unul pentru partea pe front end care contine
+			structura de Angular si cel de backend unde este dezvoltat un API care face requesturi la o baza de date SQL Server pentru a oferi datele
+			necesare aplicatiei. De asemenea pentru managmentul taskurilor am folosit Trello.
+		  </p>
+        </aside>
+        <p>
+          În dezvoltarea aplicației au fost folosite următoarele tehnologii pentru partea de front end:
+        </p>
+        <ul>
+          <li>
+            HTML5
+          </li>
+          <li>
+            SCSS
+          </li>
+          <li>
+            Angular2
+          </li>
+           <li>
+            Figma
+          </li>
+        </ul>
+		<p>
+          Pentru partea de backend am facut un API in .NET si am uitilizat urmatoarele tehnologii:
+        </p>
+		<ul>
+          <li>
+            .NET Web API application.
+          </li>
+          <li>
+            Entity Framework (ORM).
+          </li>
+          <li>
+			SQL Server Studio 2017 pentru baza de date a aplicatiei.
+          </li>
+        </ul>
+        <p>
+      </section>
+	  
+      <section id="article">
+        <h2><b>Proiectarea Aplicatiei</b></h2>
+      </section>
+        <h3><b>1. Wireframe( Figma )</b></h3>
+          <p>
+            Pentru inceput am creat un wireframe pentru a modela cat mai bine si clar ideile pe care le aveam in legatura cu proiectul.
+            La acest pas ne-am folosit de aplicatia Figma care iti ofera libertatea sa 
+            generezi screenuri ale aplicatiei simple dar explicative. Astfel reusesti sa faci un flow al aplicatiei destul de bine inainte de a face
+			efectiv dezvoltarea aplicatiei. Creare wireframe-ului ne-a ajutat foarte mult deoarece am stiut in pasul de implementare ce aveam de dezvoltat
+			si astfel finalizarea task-urilor a fost mult mai rapida.
+			<a href="https://www.figma.com/file/VfuG0fC1UqNk8IG83E5HiAcF/HAG-2.0">Linkul catre wireframe</a>
+          </p>
+        </section>
+        <h3><b>2. Designul obiectelor SVG ( Adobe Illustrator )</b></h3>
+          <p>
+            Dupa ce am stabilit exact care vor fi screenurile pe care le vom integra in aplicatia noastra am trecut la urmatorul pas 
+            si anume creare obiectelor care trebuie adaugate (planetele).Ca si tool am folosit Adobe Ilustrator pentru a genera planetele si 
+			ulterior le-am exportat ca SVG pentru a le integra in codul aplicatiei.
+            De asemenea in acest proces am definitivat anumete aspecte ale aplicatiei: fontul pentru text si paleta de culori. 
+		 </p>
+        </section>
+        <h3><b>3. Implementare</b></h3>
+          <p>
+            Dupa finalizarea celor doua etape esentiale si stabilirea clara a modului in care ne dorim sa arate si sa functioneze
+            jocul, am inceput implementarea. Pentru a reduce codul duplicat, am organizat cat mai bine codul in componente separate( avantajul de a utiliza frameworkul Angular) pentru a
+			creste flexibilitatea si posibila extidere sau modificare a aplicatiei ulterioar. In implementare am folosit aceiasi pasi ca si la design, adica
+            am inceput cu implemetarea lucrurilor de baza, iar apoi am lucrat la detalii. Pentru elementele principale din pagina, planetele, am folosit svg-uri in vederea animarii lor ulterior.
+			Angular este un framework flexibil care iti ofera posibilitatea sa dezvolti partea de front end a unei aplicatii foarte usor. Ca limbaj de programare Angular utilizeaza Typescriptul,
+			care este o extensie a limbajului Java Script dar care permite anotarea tipurilor de date. Pe langa acestea cu ajutorul Typescriptul si a structurii Angular se poate usor sa iti configurezi
+			aplicatia astfel incat sa urmeze good practice-uri si design patterne pentru a avea un cod cat mai lizibil.
+		  </p>
+		  <h3><b>4. Tehnologiile utilizate</b></h3>
+          <p>
+          	Una din avantajale cele mai mare ale Angularului este aceea ca poti scapa de duplicarea
+			codului (html + css).Este introdusa notiunea de componenta angular care este format de fapt din 3 fisiere: un fisier de html,un fisier de sccs sau css si un fisier de typescript(ts). O data creata
+			o componenta o poti 'injecta' in proiect fara a rescrie din nou codul. In cadrul proiectului nostru avem urmatoarele componente generale : butoanele cu raspunsuri si butonul de back care te redirectioneaza
+			catre o anumita pagina din  aplicatie.
+			<br>
+			Pe langa aceste componente un alt avantaj este acela ca iti poti creea anumite servicii pe care le injectezi in componenta si poti reutiliza serviciul in mai multe componente deci reduci duplicarea codului. De exemplu in cadrul aplicatiei avem un serviciu care se leaga cu partea de backend si are metoda care ne aduce intrebarile din baza de date pentru a fi afisate in view.
+			<br>
+			In cadrul proiectului am utilizat <b>SASS(Syntactically Awesome Style Sheets)</b> care este un pre-procesor CSS(extensie CSS) are permite utilizarea unui limbaj mult mai puternic si inteligent decat simplul CSS. Odata ce este compilat acesta va genera fisierul
+			CSS care va putea fi folosit pentru aplicatia web in mod normal.Un avantaj al SCSS este faptul ca te poti utiliza de clase pentru a scrie css valid pentru copii din clasa respectiva.
+			Avem un serviciu pe partea de front end care este conectat la un API iar in cadrul acestui serviciu se fac requesturile la baza de date pentru a lua intrebarile in functie de planeta pe care utilizatorul 
+			a dat click apoi in functie de nivelul pe care l-a ales(bulinele din cadrul planetelor).Pentru partea de API am utilizat frameworkul .Net impreuna cu o baza de date SQL Server. API-ul ne pune la dispozitie cateva
+			endpointuri care cu ajutorul serviciului din typescript le accesam.Un model de request din typescript poate fi:
+			Din API trimitem un DTO care este apoi mapat la DTO din typescript iar apoi cu datele venite de pe backend populam ceea ce este necesar.De exemplu in momentul cand facem click pe o bulina de pe planeta
+			trimitem un request sa ne vina o intrebare random pentru acel nivel si acea planeta.Ca si raspuns primim un dto cu intrebarea si raspunsurile posibile pe care le afisam in pagina respectiva iar apoi asteptam raspunsul utilizatorului pentru a valida.
+		  </p>
+		 <section id="article">
+		  <h4><b>Flowul aplicatiei - prezentare</b></h4>
+          <p>
+			Pagina de start este una minimala dar care iese in evidenta datorita fundalului dinamic.Contine logo-ul aplicatiei si are un buton de start game care ne redirectioneaza catre pagina cu planete adica nivelele
+			din cadrul jocului.
+			In pagina cu nivele utilizatorul va avea ocazia sa aleaga planeta(nivelul) care doreste sa il joace. Daca face click pe planeta va fi redirectionat catre alta pagina unde planeta aleasa va
+			aparea la o dimensiune mai mare iar acesta va avea ocazia sa aleaga subnivelul pe care doreste sa il faca din cadrul planetei(bulina). Dupa ce va alege va fi redirectionat catre intrebarea de la nivelul respectiv.
+			Oricum ar raspunde(corect/incorect) utilizatorul va primi un popupup unde i se va sugera daca a facut alegerea corecta sau nu.Pe langa mesajul vizual utilizator va primi si un mesaj auditiv corespunzator alegerii facute.De asemenea va avea ocazia sa treaca la urmatorul nivel din planeta.
+			Dupa ce termina un numar de 
+			nivele din cadrul unei planeta va fi redirectionat catre pagina cu planete unde va observa ca urmatoarea planeta a fost deblocata si poate alege sa mearga catre acea planeta.Utilizatorul va sti cand o planeta a fost deblocata deoarece va primi un mesaj auditv in momentul cand indeplineste conditiile de raspunsuri corecte din lumea precedenta.
+          </p>
+        </section>
+  </body>
+</html>

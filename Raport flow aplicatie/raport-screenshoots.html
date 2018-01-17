@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hag</title>
+    <link rel="stylesheet" href="scholarly.css">
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header>
+      <p class="title">Hag</p>
+      <p class="subtitle">HTTP Adventure Game</p>
+    </header>
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>HTTP Adventure Game</h1>
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="" typeof="schema:Person">
+              <span property="schema:givenName">Ecaterina</span>
+              <span property="schema:familyName">Manolache</span>
+            </a>
+  
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:ecaterina.manolache96@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+          <li property="schema:contributor" typeof="sa:ContributorRole">
+            <a property="schema:contributor" href="" typeof="schema:Person">
+              <span property="schema:givenName">Camelia</span>
+              <span property="schema:familyName">Macariu</span>
+            </a>
+           <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:camelia.macaraiu@gmail.com" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+        </ol>
+      </section>
+
+      <section typeof="sa:Abstract" id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          HTTP Adventure Game este un joc Web educativ de tip adventure al cărui scenariu se bazează pe fluxul 
+          de acţiuni privitoare la HTTP, conform diagramei protocolului. Pentru fiecare "scenă" principală, 
+          se va interacţiona cu jucătorul oferindu-i-se întrebări de tip trivia referitoare la conceptele de bază ale spaţiului WWW, 
+		  eventual recompense/penalizări etc.Aceste informaţii sunt preluate cu ajutorul unui API conectat la o baza de date.
+        </p>
+      </section>
+	  
+	  <section typeof="sa:Abstract" id="abstract">
+        <h2>Flowul applicatiei (screenshoots)</h2>
+        <b>Pagina de start</b>
+		<img src="firstpage.png"style="width:100%;height:100%;">
+		<br>	
+		<b>Pagina cu nivele (planete)</b>
+		<img src="roomlevel.png"style="width:100%;height:100%;">
+		<br>
+		<b>Pagina cu intrebari</b>
+		<img src="question.png"style="width:100%;height:100%;">
+		<br>
+		<b>Raspuns corect</b>
+		<img src="correct.png"style="width:100%;height:100%;">
+		<br>
+		<b>Raspuns incorect</b>
+		<img src="incorrect.png"style="width:100%;height:100%;">
+		<br>
+		<b>Planeta neblocata(o planeta se deblocheaza dupa ce raspunzuri la un anumit numar de intrebari corect)</b>
+		<img src="locked planet.png"style="width:100%;height:100%;">
+		<br>
+		<b>Planeta deblocata</b>
+		<img src="unlockedplanet.png"style="width:100%;height:100%;">
+		<br>
+      </section>
+	  <section typeof="sa:Abstract" id="abstract">
+		<h2>Exemple de cod</h2>
+		<p>O componenta de angular </p>
+		Componenta de buton care este de fapt o componenta generala si aplicata de fiecare data cand se genereaza pagina cu intrebari.Fiind o componenta generala
+		si pentru ca o injectam de fiecare data cand se cere sa se genereze componeneta de intrebari 
+		<b>Planeta deblocata</b>
+		<b>button.component.html</b>
+		<img src="button-html.png"style="width:100%;height:100%;">
+		<br>
+		<b>button.component.scss</b>
+		<img src="btnscss.png"style="width:100%;height:100%;">
+		<br>
+		<b>button.component.ts</b>
+		<img src="button-ts.png"style="width:100%;height:100%;">
+		<br>
+		
+	  </section>
+     
+      
+           
+			
+		
+  </body>
+</html>
