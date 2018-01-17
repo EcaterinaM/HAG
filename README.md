@@ -5,4 +5,5 @@ An adventure-based educational web game whose scenario is based on the HTTP acti
 
 # HAG API 
 # link : https://github.com/EcaterinaM/HagApi
-# Wireframe initial : https://www.figma.com/file/VfuG0fC1UqNk8IG83E5HiAcF/HAG-2.0?node-id=1%3A2
+# Video HAG : https://youtu.be/ymu7Du6W_Rc
+ Wireframe initial : https://www.figma.com/file/VfuG0fC1UqNk8IG83E5HiAcF/HAG-2.0?node-id=1%3A2
